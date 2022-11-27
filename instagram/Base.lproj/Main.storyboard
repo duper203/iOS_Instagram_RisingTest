@@ -6,14 +6,13 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register-->
+        <!--RegisterVC-->
         <scene sceneID="1yl-vI-Yug">
             <objects>
-                <viewController storyboardIdentifier="Register" id="W5J-rY-VPQ" customClass="Register" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="W5J-rY-VPQ" customClass="RegisterVC" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fi-Ky-T6d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,52 +24,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7r3-g9-swu">
-                                <rect key="frame" x="33" y="143" width="325" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jma-wS-13j">
-                                    <size key="itemSize" width="157" height="47"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dfi-dd-E6g">
-                                        <rect key="frame" x="0.0" y="0.0" width="157" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YPg-7A-SeV">
-                                            <rect key="frame" x="0.0" y="0.0" width="157" height="47"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.33175413529999997" green="0.7375590085" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="customSize" width="157" height="47"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VzB-tI-S6j">
-                                        <rect key="frame" x="168" y="0.0" width="157" height="47"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Uf-KY-cy8">
-                                            <rect key="frame" x="0.0" y="0.0" width="157" height="47"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.77350391340000002" green="0.59516084219999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOl-fR-YMb">
-                                <rect key="frame" x="76" y="211" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="ATN-bU-hOv" kind="embed" id="3V0-IM-Kok"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b7b-dL-cQ3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="tapBarCollection" destination="7r3-g9-swu" id="2Ta-xW-d5L"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-hO-CQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +134,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDk-oM-Nrr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="689"/>
+            <point key="canvasLocation" x="981" y="890"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -298,7 +255,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="가입하기"/>
                                 <connections>
-                                    <action selector="registerBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnx-dH-9qR"/>
+                                    <action selector="registerbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOn-Q6-Kei"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,21 +324,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaH-kQ-d79" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6K3-nl-bRz">
-            <objects>
-                <viewController id="ATN-bU-hOv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EXC-SP-BDN">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="AyS-5b-B2W"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OW1-A8-VE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2389" y="-149"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ciQ-kr-spR">

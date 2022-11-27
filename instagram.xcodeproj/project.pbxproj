@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A801D2933C58500BB985E /* LoginVC.swift */; };
+		8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A801F2933C66800BB985E /* RegisterVC.swift */; };
 		8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7AC382933345E0024C219 /* AppDelegate.swift */; };
 		8BB7AC3B2933345E0024C219 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7AC3A2933345E0024C219 /* SceneDelegate.swift */; };
 		8BB7AC3D2933345E0024C219 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7AC3C2933345E0024C219 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B4A801D2933C58500BB985E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8B4A801F2933C66800BB985E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		8BB7AC352933345E0024C219 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB7AC382933345E0024C219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB7AC3A2933345E0024C219 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				8BB7AC382933345E0024C219 /* AppDelegate.swift */,
 				8BB7AC3A2933345E0024C219 /* SceneDelegate.swift */,
 				8BB7AC3C2933345E0024C219 /* ViewController.swift */,
+				8B4A801D2933C58500BB985E /* LoginVC.swift */,
+				8B4A801F2933C66800BB985E /* RegisterVC.swift */,
 				8BB7AC3E2933345E0024C219 /* Main.storyboard */,
 				8BB7AC44293334650024C219 /* Assets.xcassets */,
 				8BB7AC46293334650024C219 /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 				8BB7AC432933345E0024C219 /* instagram.xcdatamodeld in Sources */,
 				8BB7AC3D2933345E0024C219 /* ViewController.swift in Sources */,
 				8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */,
+				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
 				8BB7AC3B2933345E0024C219 /* SceneDelegate.swift in Sources */,
+				8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
