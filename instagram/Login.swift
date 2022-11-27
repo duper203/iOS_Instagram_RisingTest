@@ -15,12 +15,7 @@ class LoginVC: UIViewController{
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "Register")
                 self.navigationController?.pushViewController(pushVC!, animated: true)
     }
-    
-    
-    
-    
-    
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
