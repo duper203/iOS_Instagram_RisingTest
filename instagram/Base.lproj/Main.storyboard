@@ -193,9 +193,9 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaI-HX-Z0G">
-                                        <rect key="frame" x="10" y="0.0" width="142" height="50"/>
+                                        <rect key="frame" x="10" y="0.0" width="130" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="142" id="2U4-0R-FYa"/>
+                                            <constraint firstAttribute="width" constant="130" id="2U4-0R-FYa"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="instagram">
