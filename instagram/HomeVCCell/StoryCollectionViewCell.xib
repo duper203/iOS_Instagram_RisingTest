@@ -11,15 +11,62 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="gTV-IL-0wX" customClass="StoryCollectionViewCell" customModule="instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="111" height="112"/>
+            <rect key="frame" x="0.0" y="0.0" width="111" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="111" height="112"/>
+                <rect key="frame" x="0.0" y="0.0" width="111" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-Pd-ejI">
-                        <rect key="frame" x="0.0" y="0.0" width="111" height="112"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="111" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79u-VA-Dfc">
+                                <rect key="frame" x="31.666666666666671" y="0.0" width="48" height="48"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cM-VK-EIi">
+                                        <rect key="frame" x="0.33333333333333215" y="0.66666666666666785" width="47" height="47"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dH2-py-NeW">
+                                                <rect key="frame" x="1" y="3" width="45" height="41.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Tu0-Dk-PyY"/>
+                                                    <constraint firstAttribute="width" constant="45" id="bHn-7W-KQr"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="LPg-cR-3wn"/>
+                                            <constraint firstItem="dH2-py-NeW" firstAttribute="centerX" secondItem="3cM-VK-EIi" secondAttribute="centerX" id="iCn-Ld-cbm"/>
+                                            <constraint firstAttribute="height" constant="47" id="oGF-eS-PZz"/>
+                                            <constraint firstItem="dH2-py-NeW" firstAttribute="centerY" secondItem="3cM-VK-EIi" secondAttribute="centerY" id="sqG-Jq-aeC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="9C2-dh-DCA"/>
+                                    <constraint firstAttribute="width" constant="48" id="D2R-md-cgX"/>
+                                    <constraint firstItem="3cM-VK-EIi" firstAttribute="centerY" secondItem="79u-VA-Dfc" secondAttribute="centerY" id="OL9-tN-Yse"/>
+                                    <constraint firstItem="3cM-VK-EIi" firstAttribute="centerX" secondItem="79u-VA-Dfc" secondAttribute="centerX" id="r6u-8q-6Yl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgc-AW-qD9">
+                                <rect key="frame" x="40.666666666666664" y="50" width="29.999999999999993" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fgc-AW-qD9" firstAttribute="centerX" secondItem="dH2-py-NeW" secondAttribute="centerX" id="49D-FE-eKl"/>
+                            <constraint firstItem="79u-VA-Dfc" firstAttribute="top" secondItem="Twe-Pd-ejI" secondAttribute="top" id="TgH-Ms-U0z"/>
+                            <constraint firstItem="Fgc-AW-qD9" firstAttribute="top" secondItem="79u-VA-Dfc" secondAttribute="bottom" constant="2" id="e54-Nh-TzA"/>
+                            <constraint firstItem="79u-VA-Dfc" firstAttribute="centerX" secondItem="Twe-Pd-ejI" secondAttribute="centerX" id="pPI-3c-cNx"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -30,13 +77,25 @@
                 <constraint firstAttribute="bottom" secondItem="Twe-Pd-ejI" secondAttribute="bottom" id="pf8-H8-5d5"/>
                 <constraint firstItem="Twe-Pd-ejI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rI2-xr-Gnc"/>
             </constraints>
-            <size key="customSize" width="111" height="112"/>
-            <point key="canvasLocation" x="112.21374045801527" y="9.1549295774647899"/>
+            <size key="customSize" width="111" height="80"/>
+            <connections>
+                <outlet property="profileBgOne" destination="79u-VA-Dfc" id="R45-zp-YNo"/>
+                <outlet property="profileBgTwo" destination="3cM-VK-EIi" id="yls-1J-B88"/>
+                <outlet property="profileImg" destination="dH2-py-NeW" id="EBK-ZD-fhV"/>
+            </connections>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
