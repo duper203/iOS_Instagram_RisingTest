@@ -44,6 +44,7 @@
 		8BE9C4B52935FCC4007CC965 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */; };
 		8BE9C4B8293600E0007CC965 /* NotifyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */; };
 		8BE9C4B9293600E0007CC965 /* NotifyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */; };
+		8BE9C4BB2936F06A007CC965 /* RegisterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4BA2936F069007CC965 /* RegisterPhoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
 		8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyTableViewCell.swift; sourceTree = "<group>"; };
 		8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifyTableViewCell.xib; sourceTree = "<group>"; };
+		8BE9C4BA2936F069007CC965 /* RegisterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				8BB7AC3C2933345E0024C219 /* ViewController.swift */,
 				8B4A801D2933C58500BB985E /* LoginVC.swift */,
 				8B4A801F2933C66800BB985E /* RegisterVC.swift */,
+				8BE9C4BA2936F069007CC965 /* RegisterPhoneViewController.swift */,
 				8BE9C484293448A1007CC965 /* HomeViewController.swift */,
 				8BE9C48A29347F5E007CC965 /* HomeVCCell */,
 				8BE9C4932934B69D007CC965 /* ProfileViewController.swift */,
@@ -393,6 +396,7 @@
 				8BE9C48829344ACC007CC965 /* FeedTableViewCell.swift in Sources */,
 				8BE9C48D29347F8A007CC965 /* StoryTableViewCell.swift in Sources */,
 				8BB7AC3D2933345E0024C219 /* ViewController.swift in Sources */,
+				8BE9C4BB2936F06A007CC965 /* RegisterPhoneViewController.swift in Sources */,
 				8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */,
 				8BE9C4942934B69D007CC965 /* ProfileViewController.swift in Sources */,
 				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
