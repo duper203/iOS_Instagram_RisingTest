@@ -39,6 +39,11 @@
 		8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4AA29351B23007CC965 /* ReelsViewController.swift */; };
 		8BE9C4AE29351B75007CC965 /* ReelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4AC29351B75007CC965 /* ReelsTableViewCell.swift */; };
 		8BE9C4AF29351B75007CC965 /* ReelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE9C4AD29351B75007CC965 /* ReelsTableViewCell.xib */; };
+		8BE9C4B12935DE68007CC965 /* EveryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B02935DE68007CC965 /* EveryData.swift */; };
+		8BE9C4B32935E00C007CC965 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B22935E00B007CC965 /* UploadViewController.swift */; };
+		8BE9C4B52935FCC4007CC965 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */; };
+		8BE9C4B8293600E0007CC965 /* NotifyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */; };
+		8BE9C4B9293600E0007CC965 /* NotifyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		8BE9C4AA29351B23007CC965 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		8BE9C4AC29351B75007CC965 /* ReelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsTableViewCell.swift; sourceTree = "<group>"; };
 		8BE9C4AD29351B75007CC965 /* ReelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReelsTableViewCell.xib; sourceTree = "<group>"; };
+		8BE9C4B02935DE68007CC965 /* EveryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryData.swift; sourceTree = "<group>"; };
+		8BE9C4B22935E00B007CC965 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyTableViewCell.swift; sourceTree = "<group>"; };
+		8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +169,15 @@
 				8BE9C4AA29351B23007CC965 /* ReelsViewController.swift */,
 				8BE9C4A929351AEB007CC965 /* ReelsVCCell */,
 				8BB7AC3E2933345E0024C219 /* Main.storyboard */,
+				8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */,
+				8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */,
+				8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */,
+				8BE9C4B22935E00B007CC965 /* UploadViewController.swift */,
 				8BB7AC44293334650024C219 /* Assets.xcassets */,
 				8BB7AC46293334650024C219 /* LaunchScreen.storyboard */,
 				8BB7AC49293334650024C219 /* Info.plist */,
 				8BB7AC412933345E0024C219 /* instagram.xcdatamodeld */,
+				8BE9C4B02935DE68007CC965 /* EveryData.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -336,6 +351,7 @@
 				8BE9C48929344ACC007CC965 /* FeedTableViewCell.xib in Resources */,
 				8BB7AC45293334650024C219 /* Assets.xcassets in Resources */,
 				8BE9C4992934BAF3007CC965 /* ProfileCollectionViewCell.xib in Resources */,
+				8BE9C4B9293600E0007CC965 /* NotifyTableViewCell.xib in Resources */,
 				8BE9C48E29347F8A007CC965 /* StoryTableViewCell.xib in Resources */,
 				8BE9C4AF29351B75007CC965 /* ReelsTableViewCell.xib in Resources */,
 				8BE9C4922934857C007CC965 /* StoryCollectionViewCell.xib in Resources */,
@@ -368,8 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE9C4A329350D05007CC965 /* SearchViewController.swift in Sources */,
+				8BE9C4B32935E00C007CC965 /* UploadViewController.swift in Sources */,
 				8BE9C4912934857C007CC965 /* StoryCollectionViewCell.swift in Sources */,
 				8BE9C4A7293510DE007CC965 /* FeedCollectionViewCell.swift in Sources */,
+				8BE9C4B52935FCC4007CC965 /* NotifyViewController.swift in Sources */,
 				8BE9C49C2934D87B007CC965 /* ProfileCollectionViewCellTwo.swift in Sources */,
 				8BB7AC432933345E0024C219 /* instagram.xcdatamodeld in Sources */,
 				8BE9C48829344ACC007CC965 /* FeedTableViewCell.swift in Sources */,
@@ -379,12 +397,14 @@
 				8BE9C4942934B69D007CC965 /* ProfileViewController.swift in Sources */,
 				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
 				8BB7AC3B2933345E0024C219 /* SceneDelegate.swift in Sources */,
+				8BE9C4B8293600E0007CC965 /* NotifyTableViewCell.swift in Sources */,
 				8BE9C485293448A2007CC965 /* HomeViewController.swift in Sources */,
 				8BE9C4AE29351B75007CC965 /* ReelsTableViewCell.swift in Sources */,
 				8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */,
 				8BE9C4982934BAF3007CC965 /* ProfileCollectionViewCell.swift in Sources */,
 				8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */,
 				8BE9C4A02934D99A007CC965 /* ProfileCollectionViewCellThree.swift in Sources */,
+				8BE9C4B12935DE68007CC965 /* EveryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +584,7 @@
 				DEVELOPMENT_TEAM = SCDJJYX64B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "use album";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -592,6 +613,7 @@
 				DEVELOPMENT_TEAM = SCDJJYX64B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "use album";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

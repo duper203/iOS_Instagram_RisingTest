@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,51 @@ class HomeViewController: UIViewController{
         //(5) storytableviewcell 등록
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
+        
+        //imagepicker
+        imagePickerController.delegate = self
     }
+    
+    @IBAction func uploadFeed(_ sender: Any) {
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(self.imagePickerController, animated: true, completion: nil)
+    }
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let img = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
+
+        
+//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
+        
+        nextVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
+        
+//
+//        if let img = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage{
+//            print("이미지 선택 완료")
+
+            nextVC.uploadImgView.image = img
+//                itemImg.image = img as? UIImage
+//            }
+        
+        
+        
+//            dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //알림화면으로 전환
+    
+    @IBAction func notifyBtn(_ sender: Any) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "NotifyViewController")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
