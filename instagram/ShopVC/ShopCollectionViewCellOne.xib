@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCollectionViewCellOne" id="gTV-IL-0wX" customClass="ShopCollectionViewCellOne" customModule="instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="455" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdP-EQ-2JS">
+                        <rect key="frame" x="0.0" y="0.0" width="455" height="50"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nXF-bE-9VE">
+                                <rect key="frame" x="0.0" y="0.0" width="455" height="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nXF-bE-9VE" secondAttribute="trailing" id="GUg-r4-mvq"/>
+                            <constraint firstItem="nXF-bE-9VE" firstAttribute="top" secondItem="jdP-EQ-2JS" secondAttribute="top" id="TVD-MX-2sK"/>
+                            <constraint firstItem="nXF-bE-9VE" firstAttribute="leading" secondItem="jdP-EQ-2JS" secondAttribute="leading" id="mpE-Yb-drL"/>
+                            <constraint firstAttribute="bottom" secondItem="nXF-bE-9VE" secondAttribute="bottom" id="rhY-8U-Jcj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jdP-EQ-2JS" secondAttribute="bottom" id="1Dh-bA-MJn"/>
+                <constraint firstItem="jdP-EQ-2JS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZgA-XS-wEX"/>
+                <constraint firstAttribute="trailing" secondItem="jdP-EQ-2JS" secondAttribute="trailing" id="f2G-dN-KB9"/>
+                <constraint firstItem="jdP-EQ-2JS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hAR-I0-5sI"/>
+            </constraints>
+            <size key="customSize" width="455" height="50"/>
+            <point key="canvasLocation" x="377.86259541984731" y="-12.67605633802817"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

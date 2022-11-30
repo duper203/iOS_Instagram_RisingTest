@@ -16,7 +16,21 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var btnHeart: UIButton!
     @IBOutlet weak var btnBookmark: UIButton!
     @IBOutlet weak var likes: UILabel!
-    @IBOutlet weak var FeedComment: UILabel!
+    
+    
+    @IBOutlet weak var explainLabel: UILabel!
+    
+    @IBAction func commentBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myModalViewController = storyboard.instantiateViewController(withIdentifier: "CommentViewController")
+        myModalViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        myModalViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        self.present
+//        (myModalViewController, animated: true, completion: nil)
+    }
+    
+    
+    
     @IBOutlet weak var userProfileTwo: UIImageView!
     
     @IBAction func btnHeart(_ sender: Any) {
@@ -44,10 +58,7 @@ class FeedTableViewCell: UITableViewCell {
         userProfileTwo.layer.cornerRadius = 11
         userProfileTwo.clipsToBounds = true
         
-        //label 안에 특정 부분만 볼드 및 크기 다르게
-        let font = UIFont.boldSystemFont(ofSize: 9)
-        let Str = NSMutableAttributedString(string: FeedComment.text ?? "")
-        Str.addAttribute(.font, value: font, range: NSRange.init(location: 0, length: 5))
+        
         
     }
 

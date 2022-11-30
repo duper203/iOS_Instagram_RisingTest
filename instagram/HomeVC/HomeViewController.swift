@@ -73,6 +73,10 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     
+    @IBAction func DMBtn(_ sender: Any) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DMViewController")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -102,7 +106,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         if (indexPath.row == 0){
             return 80
         }else{
-            return 580
+            return 600
         }
     }
     

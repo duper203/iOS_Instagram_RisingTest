@@ -13,7 +13,7 @@ class NotifyViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func dismissBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
