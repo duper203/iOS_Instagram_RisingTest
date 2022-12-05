@@ -9,6 +9,7 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
     
+    var delegate: CellDelegate?
     
     @IBOutlet weak var userProfile: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -21,12 +22,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var explainLabel: UILabel!
     
     @IBAction func commentBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let myModalViewController = storyboard.instantiateViewController(withIdentifier: "CommentViewController")
-        myModalViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        myModalViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//        self.present
-//        (myModalViewController, animated: true, completion: nil)
+        print("버튼 클릭")
+        delegate?.buttondidtap()
     }
     
     

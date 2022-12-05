@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol CellDelegate{
+    func buttondidtap()
+}
+
 class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
@@ -39,29 +43,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        let img = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
-
-        
-//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-        
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
-        
-        nextVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
-        
-//
-//        if let img = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage{
-//            print("이미지 선택 완료")
-
-            nextVC.uploadImgView.image = img
-//                itemImg.image = img as? UIImage
-//            }
-        
-        
-        
-//            dismiss(animated: true, completion: nil)
     }
     
     
@@ -106,7 +87,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         if (indexPath.row == 0){
             return 80
         }else{
-            return 600
+            return 500
         }
     }
     
@@ -141,5 +122,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 60)
     }
+    
+}
+
+extension HomeViewController: CellDelegate{
+    func buttondidtap() {
+        print("protocol")
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+
+    }
+    
     
 }
