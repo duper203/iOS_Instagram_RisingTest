@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDP-3U-56h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tf1-4l-Bul">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -335,7 +335,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fdX-ZS-lQp">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="yaa-65-CXo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KCs-aC-9gX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KCs-aC-9gX">
                                 <rect key="frame" x="16" y="11" width="101" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -611,7 +611,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="알림" image="chevron.left" catalog="system" id="CNT-Mw-Mmp">
                                             <color key="tintColor" red="0.062376402320000003" green="0.051779739560000003" blue="0.215700686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
-                                                <action selector="dismissBtn:" destination="8D8-11-ELJ" id="n1y-7c-zs1"/>
+                                                <action selector="dismissBtn:" destination="XaF-me-ajk" id="KJX-qi-XMm"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -717,7 +717,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34c-kA-MfR"/>
-                                    <segue destination="QDP-3U-56h" kind="presentation" modalPresentationStyle="fullScreen" id="KRD-XW-MQJ"/>
+                                    <segue destination="QDP-3U-56h" kind="presentation" modalPresentationStyle="fullScreen" id="T4M-CH-H4q"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-j1-Clc">
@@ -832,6 +832,8 @@
                     <navigationItem key="navigationItem" id="r3n-hK-bdM"/>
                     <connections>
                         <outlet property="loginBtn" destination="5Nb-HX-zJp" id="rug-OX-oLy"/>
+                        <outlet property="loginID" destination="3f0-hl-AS2" id="goJ-2N-uYP"/>
+                        <outlet property="loginPss" destination="GZN-SB-Qbe" id="wHX-or-r6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -856,10 +858,10 @@
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Register LastVC-->
         <scene sceneID="ciQ-kr-spR">
             <objects>
-                <viewController storyboardIdentifier="RegisterTwoViewController" id="23W-gc-Tac" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterTwoViewController" id="23W-gc-Tac" customClass="RegisterLastVC" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qyQ-cM-u8U">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -868,21 +870,33 @@
                                 <rect key="frame" x="15" y="168" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameTextfield:" destination="23W-gc-Tac" eventType="editingDidEnd" id="OjB-Rp-q1l"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-6n-JQ5">
                                 <rect key="frame" x="15" y="227" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pssTextfield:" destination="23W-gc-Tac" eventType="editingDidEnd" id="fTU-je-uis"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPZ-0x-lwb">
                                 <rect key="frame" x="15" y="345" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="usernameTextfield:" destination="23W-gc-Tac" eventType="editingDidEnd" id="d06-HQ-C2C"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-b1-lFo">
                                 <rect key="frame" x="15" y="286" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ageTextfield:" destination="23W-gc-Tac" eventType="editingDidEnd" id="GPi-Rx-UqH"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-O7-Jgv">
                                 <rect key="frame" x="156.66666666666666" y="89" width="79.666666666666657" height="19"/>
@@ -899,11 +913,14 @@
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="가입">
+                                    <backgroundConfiguration key="background"/>
                                     <color key="baseBackgroundColor" red="0.1952610612" green="0.4496648312" blue="0.85886693000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="RegisterUserBtn:" destination="W5J-rY-VPQ" eventType="touchUpInside" id="6Vy-0x-IhG"/>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5h-Vb-3Cc"/>
+                                    <action selector="signupBtn:" destination="23W-gc-Tac" eventType="touchUpInside" id="39J-LQ-JOA"/>
+                                    <segue destination="QDP-3U-56h" kind="presentation" modalPresentationStyle="fullScreen" id="bq8-P0-KEG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -930,6 +947,13 @@
                             <constraint firstItem="R6b-9D-rS8" firstAttribute="top" secondItem="8h8-pQ-Nsf" secondAttribute="top" constant="109" id="yl6-cr-qvx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageTextfield" destination="SW0-b1-lFo" id="QPn-Y4-oPn"/>
+                        <outlet property="nameTextfield" destination="R6b-9D-rS8" id="z6L-hT-pxp"/>
+                        <outlet property="pssTextfield" destination="eHo-6n-JQ5" id="8g3-Y5-BBX"/>
+                        <outlet property="signupBtn" destination="H4K-ES-VtH" id="jk8-D4-vr9"/>
+                        <outlet property="usernameTextfield" destination="aPZ-0x-lwb" id="UID-eN-AXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPd-gx-MF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1021,6 +1045,9 @@
             <point key="canvasLocation" x="5994.6564885496182" y="1638.7323943661972"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T4M-CH-H4q"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bag.fill" catalog="system" width="128" height="128"/>

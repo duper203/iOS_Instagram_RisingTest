@@ -7,17 +7,8 @@ target 'instagram' do
   pod 'AFNetworking', '~> 2.6'
   pod 'Alamofire', '~> 5.1'
   pod 'SwiftyJSON'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'SnapKit'
 
-
-  # Pods for instagram
-
-  target 'instagramTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'instagramUITests' do
-    # Pods for testing
-  end
 
 end

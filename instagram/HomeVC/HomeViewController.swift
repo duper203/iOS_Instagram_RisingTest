@@ -12,7 +12,7 @@ protocol CellDelegate{
     func buttondidtap()
 }
 
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class HomeViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -87,7 +87,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         if (indexPath.row == 0){
             return 80
         }else{
-            return 500
+            return 600
         }
     }
     
@@ -122,6 +122,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 60)
     }
+    
+}
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        <#code#>
+//    }
     
 }
 

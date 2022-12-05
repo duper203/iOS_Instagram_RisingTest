@@ -7,17 +7,36 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class LoginVC: UIViewController{
+    lazy var dataManager: SignInDataManager = SignInDataManager()
+    var ID: String = ""
+    var pss: String = ""
     
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var loginPss: UITextField!
+    @IBOutlet weak var loginID: UITextField!
     
     @IBAction func loginBtn(_ sender: Any) {
+        print("로그인 버튼 눌름")
+        ID = loginID.text!
+        pss = loginPss.text!
+        
+        print(ID)
+        print(pss)
+        
+        let input = SignInRequest(loginId: ID, password: pss)
+        
+        dataManager.postSignIn(input, delegate: self)
+        
+        print("화면전환")
 //        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//                nextVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-//                nextVC.modalPresentationStyle = .fullScreen
-//
-//                self.present(nextVC, animated: true, completion: nil)
+//        nextVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+//        nextVC.modalPresentationStyle = .fullScreen
+//        self.present(nextVC, animated: true, completion: nil)
+        
+        
     }
     @IBAction func registerbtn(_ sender: Any) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterVC")
@@ -26,5 +45,13 @@ class LoginVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+extension LoginVC {
+    func didSuccessSignIn(_ result: SignInResponse) {
+        print("로그인에 성공")
+        
+//        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
     }
 }

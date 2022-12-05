@@ -10,6 +10,9 @@ import UIKit
 
 class DMViewController: UIViewController{
     
+    @IBAction func dismissBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
