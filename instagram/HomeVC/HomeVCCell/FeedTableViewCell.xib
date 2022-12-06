@@ -85,6 +85,9 @@
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" backgroundImage="ic_home_comment"/>
+                        <connections>
+                            <action selector="commentImageBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IWe-R0-H7h"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw1-Pn-FxG">
                         <rect key="frame" x="75" y="373" width="20" height="20"/>

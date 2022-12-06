@@ -8,9 +8,6 @@
 import Foundation
 import UIKit
 
-protocol CellDelegate{
-    func buttondidtap()
-}
 
 class HomeViewController: UIViewController{
     
@@ -35,6 +32,7 @@ class HomeViewController: UIViewController{
         
         //imagepicker
         imagePickerController.delegate = self
+        
     }
     
     @IBAction func uploadFeed(_ sender: Any) {
@@ -79,6 +77,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            
+            //까먹으면 안됨
+            cell.delegate = self
             return cell
         }
         

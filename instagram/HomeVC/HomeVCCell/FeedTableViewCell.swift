@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CellDelegate: AnyObject{
+    func buttondidtap()
+}
+
 class FeedTableViewCell: UITableViewCell {
     
     var delegate: CellDelegate?
@@ -23,10 +27,11 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBAction func commentBtn(_ sender: Any) {
         print("버튼 클릭")
-        delegate?.buttondidtap()
+        self.delegate?.buttondidtap()
     }
-    
-    
+    @IBAction func commentImageBtn(_ sender: Any) {
+        self.delegate?.buttondidtap()
+    }
     
     @IBOutlet weak var userProfileTwo: UIImageView!
     

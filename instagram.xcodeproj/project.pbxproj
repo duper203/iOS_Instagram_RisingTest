@@ -190,6 +190,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8B9F0C40293EE047003E2DD5 /* SignIn(POST) */ = {
+			isa = PBXGroup;
+			children = (
+				8B9F0C37293E1603003E2DD5 /* SignInResponse.swift */,
+				8B9F0C35293E15F0003E2DD5 /* SignInRequest.swift */,
+				8B9F0C39293E1619003E2DD5 /* SignInDataManager.swift */,
+			);
+			path = "SignIn(POST)";
+			sourceTree = "<group>";
+		};
 		8BB7AC2C2933345D0024C219 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +225,7 @@
 		8BB7AC372933345E0024C219 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F0C3B293E2A03003E2DD5 /* Constant.swift */,
 				8BE9C4B02935DE68007CC965 /* EveryData.swift */,
 				8B9F0C33293E0E3A003E2DD5 /* SignupResponse.swift */,
 				8BB7AC382933345E0024C219 /* AppDelegate.swift */,
@@ -231,7 +242,6 @@
 				8BB7AC46293334650024C219 /* LaunchScreen.storyboard */,
 				8BB7AC49293334650024C219 /* Info.plist */,
 				8BB7AC412933345E0024C219 /* instagram.xcdatamodeld */,
-				8B9F0C3B293E2A03003E2DD5 /* Constant.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -339,13 +349,11 @@
 		8BE9C4BE2936F571007CC965 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F0C40293EE047003E2DD5 /* SignIn(POST) */,
 				8B4A801D2933C58500BB985E /* LoginVC.swift */,
 				8B4A801F2933C66800BB985E /* RegisterVC.swift */,
 				8BE9C4BA2936F069007CC965 /* RegisterPhoneViewController.swift */,
 				8B9F0C31293DD223003E2DD5 /* RegisterLastVC.swift */,
-				8B9F0C39293E1619003E2DD5 /* SignInDataManager.swift */,
-				8B9F0C35293E15F0003E2DD5 /* SignInRequest.swift */,
-				8B9F0C37293E1603003E2DD5 /* SignInResponse.swift */,
 			);
 			path = LoginRegister;
 			sourceTree = "<group>";
