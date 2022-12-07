@@ -9,6 +9,7 @@ target 'instagram' do
   pod 'SwiftyJSON'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'SnapKit'
-
+pod 'SDWebImage'
+pod 'Kingfisher'
 
 end

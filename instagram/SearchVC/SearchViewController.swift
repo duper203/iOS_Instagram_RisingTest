@@ -9,15 +9,26 @@ import Foundation
 import UIKit
 
 class SearchViewController: UIViewController, UISearchResultsUpdating{
+    //DataManager
+    lazy var dataManager: SearchDataManager = SearchDataManager()
+    var searchData: [SearchResult] = []
     
+    //searchController
+    let searchController = UISearchController()
+
+
     @IBOutlet weak var FeedcollectionView: UICollectionView!
     
-    let searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //searchController
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
+        
+        //GET
+        dataManager.SearchItem(vc: self)
         
         //collectionview
         FeedcollectionView.delegate = self
@@ -36,12 +47,18 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 35
+        return searchData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = FeedcollectionView.dequeueReusableCell(withReuseIdentifier: "FeedCollectionViewCell", for: indexPath) as? FeedCollectionViewCell else{
             return UICollectionViewCell()
+        }
+        if let urlString = searchData[indexPath.item].image{
+            print(urlString)
+            
+            let url = URL(string: urlString)
+            cell.searchFeedImage.kf.setImage(with: url)
         }
         return cell
     }
@@ -61,3 +78,18 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
 }
+extension SearchViewController{
+    func SuccessSearch(_ result: SearchResponse) {
+        print("shop화면 정보 가져오기 성공!\(result.message!)")
+        
+        print(result.result)
+        searchData = result.result
+        FeedcollectionView.reloadData()
+        
+    }
+    
+    func failedToSearch(message: String) {
+        
+        print("\(message)")
+//        self.presentAlert(title: message)
+    }}

@@ -9,10 +9,7 @@ import Foundation
 import Alamofire
 
 class SignInDataManager {
-    func postSignIn(_ parameters: SignInRequest, delegate: LoginVC) {
-        
-        print("SignInDataManager!!!!!!!")
-        
+    func postSignIn(_ parameters: SignInRequest, delegate: LoginVC) {        
         AF.request("\(Constant.BASE_URL)/user/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: SignInResponse.self) { response in
@@ -40,7 +37,6 @@ class SignInDataManager {
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-
                 }
             }
     }

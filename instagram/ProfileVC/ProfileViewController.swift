@@ -9,11 +9,18 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController{
+    //DataManager
+    lazy var dataManager: MyFeedDataManager = MyFeedDataManager()
+    var MyFeedData: [MyFeedResult] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //GET
+        dataManager.MyFeedItem(vc: self)
+        
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -43,7 +50,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         case 1:
             return 5
         default:
-            return 25
+            return MyFeedData.count
         }
         
     }
@@ -68,6 +75,12 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCellThree", for: indexPath) as? ProfileCollectionViewCellThree else{
                 return UICollectionViewCell()
+            }
+            if let urlString = MyFeedData[indexPath.item].image{
+                print(urlString)
+                
+                let url = URL(string: urlString)
+                cell.myFeedImage.kf.setImage(with: url)
             }
             return cell
         }
@@ -113,3 +126,18 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
 }
+extension ProfileViewController{
+    func SuccessMyFeed(_ result: MyFeedResponse) {
+        print("프로필 화면 정보 가져오기 성공!\(result.message!)")
+        
+        print(result.result)
+        MyFeedData = result.result
+        collectionView.reloadData()
+        
+    }
+    
+    func failedToMyFeed(message: String) {
+        
+        print("\(message)")
+//        self.presentAlert(title: message)
+    }}

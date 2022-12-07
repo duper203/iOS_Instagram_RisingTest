@@ -19,7 +19,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbJ-1p-Bmb">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3RS-gN-f2N">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3RS-gN-f2N" secondAttribute="bottom" id="7om-9B-Gdc"/>
+                            <constraint firstItem="3RS-gN-f2N" firstAttribute="leading" secondItem="UbJ-1p-Bmb" secondAttribute="leading" id="KpS-zA-SGz"/>
+                            <constraint firstAttribute="trailing" secondItem="3RS-gN-f2N" secondAttribute="trailing" id="Std-iE-APM"/>
+                            <constraint firstItem="3RS-gN-f2N" firstAttribute="top" secondItem="UbJ-1p-Bmb" secondAttribute="top" id="zlu-cu-kFK"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -30,7 +41,10 @@
                 <constraint firstAttribute="bottom" secondItem="UbJ-1p-Bmb" secondAttribute="bottom" id="fB4-DN-iLX"/>
                 <constraint firstAttribute="trailing" secondItem="UbJ-1p-Bmb" secondAttribute="trailing" id="psU-4D-hPx"/>
             </constraints>
-            <point key="canvasLocation" x="67" y="-12"/>
+            <connections>
+                <outlet property="shopImageView" destination="3RS-gN-f2N" id="bju-wM-Ie1"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="-12.67605633802817"/>
         </collectionViewCell>
     </objects>
     <resources>

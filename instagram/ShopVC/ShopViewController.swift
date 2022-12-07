@@ -7,14 +7,20 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ShopViewController: UIViewController{
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    //DataManager
+    lazy var dataManager: ShopDataManager = ShopDataManager()
+    var shopData: [ShopResult] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //GET
+        dataManager.ShopItem(vc: self)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -25,6 +31,9 @@ class ShopViewController: UIViewController{
         
         let cellTwoNib = UINib(nibName: "ShopCollectionViewCellTwo", bundle: nil)
         collectionView.register(cellTwoNib, forCellWithReuseIdentifier: "ShopCollectionViewCellTwo")
+        
+        print("shop화면에서")
+
         
     }
 }
@@ -39,7 +48,9 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 0:
             return 1
         default:
-            return 25
+            print(shopData.count + 1)
+            return shopData.count
+            
         }
         
     }
@@ -53,13 +64,28 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch section{
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCellOne", for: indexPath) as? ShopCollectionViewCellOne else{
+                
+                
                 return UICollectionViewCell()
             }
             return cell
+            
         default:
+            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCellTwo", for: indexPath) as? ShopCollectionViewCellTwo else{
+                
                 return UICollectionViewCell()
             }
+            
+            if let urlString = shopData[indexPath.item].url{
+                print(urlString)
+                
+                let url = URL(string: urlString)
+                cell.shopImageView.kf.setImage(with: url)
+            }
+            
+            
+            
             return cell
         }
     
@@ -97,4 +123,21 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+}
+
+extension ShopViewController {
+    func SuccessShop(_ result: ShopResponse) {
+        print("shop화면 정보 가져오기 성공!\(result.message!)")
+        
+        print(result.result)
+        shopData = result.result
+        collectionView.reloadData()
+        
+    }
+    
+    func failedToShop(message: String) {
+        
+        print("\(message)")
+//        self.presentAlert(title: message)
+    }
 }

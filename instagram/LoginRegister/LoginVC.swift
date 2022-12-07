@@ -48,9 +48,17 @@ class LoginVC: UIViewController{
     }
 }
 
+
+
+
+
+
 extension LoginVC {
     func didSuccessSignIn(_ result: SignInResponse) {
         print("로그인에 성공")
+        
+        Constant.jwtToken = (result.result?.jwt)!
+        print(Constant.jwtToken)
         
 //        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
     }
