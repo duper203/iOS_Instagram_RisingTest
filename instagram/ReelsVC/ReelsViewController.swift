@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import AVFoundation
 
 class ReelsViewController: UIViewController{
     
@@ -15,50 +16,58 @@ class ReelsViewController: UIViewController{
     lazy var dataManager:  ReelsDataManager = ReelsDataManager()
     
     var ReelsData: [ReelsResult] = []
-    
-    @IBOutlet weak var reelsTableView: UITableView!
-    
+        
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //GET
         
+        //GET
         dataManager.ReelsItem(vc: self)
         
-        //tableview setup
-        reelsTableView.delegate = self
-        reelsTableView.dataSource = self
-
-        let reelsNib = UINib(nibName: "ReelsTableViewCell", bundle: nil)
-        reelsTableView.register(reelsNib, forCellReuseIdentifier: "ReelsTableViewCell")
+        //collectionview setup
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let FeedNib = UINib(nibName: "ReelsCollectionViewCell", bundle: nil)
+        collectionView.register(FeedNib, forCellWithReuseIdentifier: "ReelsCollectionViewCell")
+        
     }
     
 }
-extension ReelsViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ReelsData.count
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReelsTableViewCell", for: indexPath) as? ReelsTableViewCell else{
-            return UITableViewCell()
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReelsCollectionViewCell", for: indexPath) as? ReelsCollectionViewCell else{
+            return UICollectionViewCell()
         }
-        if let urlString =
-            
-            //ReelsData.url : 릴스영상 url
-            ReelsData[indexPath.row].url{
-            print(urlString)
-            
-            
+//        if let urlString = ReelsData[indexPath.item].url{
+//            print(urlString)
+//
 //            cell.setupURL(urlString)
-            
+//
+//        }
+        //ReelsData.url : 릴스영상 url
+        if let urlString = URL(string: ReelsData[indexPath.row].url!){
+            print(urlString)
+        
+            let player = AVPlayer(url: urlString)
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = self.view.bounds
+            playerLayer.videoGravity = .resizeAspect
+            self.view.layer.addSublayer(playerLayer)
+            player.play()
         }
+    
         
         return cell
+        
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 710
-    }
+    
+    
 }
 extension ReelsViewController {
     func SuccessReels(_ result: ReelsResponse) {
@@ -67,7 +76,7 @@ extension ReelsViewController {
         print(result.result)
 
         ReelsData = result.result
-        reelsTableView.reloadData()
+        collectionView.reloadData()
         print(ReelsData.count)
         
     }
@@ -78,3 +87,14 @@ extension ReelsViewController {
 
     }
 }
+////ReelsData.url : 릴스영상 url
+//if let urlString = URL(string: ReelsData[indexPath.row].url!){
+//    print(urlString)
+//
+//    let player = AVPlayer(url: urlString)
+//    let playerLayer = AVPlayerLayer(player: player)
+//    playerLayer.frame = self.view.bounds
+//    playerLayer.videoGravity = .resizeAspect
+//    self.view.layer.addSublayer(playerLayer)
+//    player.play()
+//}

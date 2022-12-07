@@ -57,6 +57,9 @@
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
                                 <state key="normal" image="ic_my_invite"/>
+                                <connections>
+                                    <action selector="recommendFollowingBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rJx-nW-egt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acG-q6-4a8">
                                 <rect key="frame" x="10" y="98" width="86" height="20.333333333333329"/>

@@ -8,17 +8,22 @@
 import UIKit
 
 class ProfileCollectionViewCell: UICollectionViewCell {
+    var delegate: CellDelegate?
+
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var userContent: UILabel!
-    
     @IBOutlet weak var addProfileBtn: UIButton!
     @IBOutlet weak var recommendFollowingBtn: UIButton!
     @IBOutlet weak var updateProfileBtn: UIButton!
-    
     @IBOutlet weak var feedCountLabel: UILabel!
     @IBOutlet weak var followingNum: UILabel!
+    
+    @IBAction func recommendFollowingBtn(_ sender: Any) {
+        self.delegate?.recommendFollowTap()
+
+        
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

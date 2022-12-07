@@ -18,7 +18,7 @@ class ShopViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //GET
         dataManager.ShopItem(vc: self)
         
@@ -65,7 +65,6 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCellOne", for: indexPath) as? ShopCollectionViewCellOne else{
                 
-                
                 return UICollectionViewCell()
             }
             return cell
@@ -83,9 +82,6 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 let url = URL(string: urlString)
                 cell.shopImageView.kf.setImage(with: url)
             }
-            
-            
-            
             return cell
         }
     
@@ -101,7 +97,8 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return CGSize(width: collectionView.frame.width, height: CGFloat(100))
         default:
             let side = CGFloat((collectionView.frame.width / 3) - (4/3))
-            return CGSize(width: side, height: side)
+            print(side)
+            return CGSize(width: 130, height: 130)
             
         }
     }
@@ -138,6 +135,5 @@ extension ShopViewController {
     func failedToShop(message: String) {
         
         print("\(message)")
-//        self.presentAlert(title: message)
     }
 }

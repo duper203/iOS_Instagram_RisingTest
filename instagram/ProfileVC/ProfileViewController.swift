@@ -79,6 +79,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as? ProfileCollectionViewCell else{
                 return UICollectionViewCell()
             }
+            
+            cell.delegate = self
+            
             if let urlString = MyInfoData.imageUrl{
                 print(urlString)
                 
@@ -100,6 +103,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCellThree", for: indexPath) as? ProfileCollectionViewCellThree else{
                 return UICollectionViewCell()
             }
+            
+            
             if let urlString = MyFeedData[indexPath.item].image{
                 print(urlString)
                 
@@ -194,4 +199,18 @@ extension ProfileViewController{
     }
     
     func failedToFollowing(message: String) { print("\(message)") }
+}
+extension ProfileViewController: CellDelegate{
+    func recommendFollowTap() {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowRecommendViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+        
+    }
+    
+    
+    func buttondidtap() {
+    }
+    
+    
 }

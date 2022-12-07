@@ -7,7 +7,12 @@
 
 import Foundation
 
-var imageName: [String] = []
+protocol CellDelegate: AnyObject{
+    func buttondidtap()
+    func recommendFollowTap()
+}
+
+
 
 //cell누를 때 상세정보 화면전환시 데이터 전달로 사용
 
@@ -38,3 +43,5 @@ struct MyFeedIndexResult{
 }
 
 var MyFeedDetailResult : MyFeedIndexResult = MyFeedIndexResult()
+
+var FeedIdx: Int = 0

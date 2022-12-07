@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol CellDelegate: AnyObject{
-    func buttondidtap()
-}
 
 class FeedTableViewCell: UITableViewCell {
     
@@ -20,11 +17,10 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewFeed: UIImageView!
     @IBOutlet weak var btnHeart: UIButton!
     @IBOutlet weak var btnBookmark: UIButton!
-    @IBOutlet weak var likes: UILabel!
-    
-    
     @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var likesBtn: UIButton!
     
+    //댓글창 넘어가기
     @IBAction func commentBtn(_ sender: Any) {
         print("버튼 클릭")
         self.delegate?.buttondidtap()

@@ -22,6 +22,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+
         
         //searchController
         searchController.searchResultsUpdater = self
@@ -80,16 +82,17 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let side = CGFloat((collectionView.frame.width / 3) - (4/3))
+        print(side)
         return CGSize(width: side, height: side)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(1)
-        
+
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
+
         return CGFloat(1)
-        
+
     }
     
 }

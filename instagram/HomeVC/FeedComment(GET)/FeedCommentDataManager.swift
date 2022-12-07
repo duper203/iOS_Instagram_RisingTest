@@ -1,28 +1,28 @@
 //
-//  FollowingDataManager.swift
+//  FeedCommentDataManager.swift
 //  instagram
 //
-//  Created by 김혜수 on 2022/12/07.
+//  Created by 김혜수 on 2022/12/08.
 //
 
 import Foundation
 import Alamofire
 
-class FollowingDataManager {
-    func FollowingItem(vc: ProfileViewController) {
-        let url = "\(Constant.BASE_URL)/follow/from/1"
+class FeedCommentDataManger {
+    func FeedCommentItem(vc: CommentViewController) {
+        let url = "\(Constant.BASE_URL)/feed/18/comment"
         
         let header: HTTPHeaders = [ "X-ACCESS-TOKEN":"eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjksImlhdCI6MTY3MDM4MDE2NiwiZXhwIjoxNjcxODUxMzk1fQ.NBIv9uaj-ijqRZqoWSA8FvbTcHwRpJjXPaExtGdoROs"]
         
         AF.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: header)
             .validate()
-            .responseDecodable(of: FollowingResponse.self) { response in
+            .responseDecodable(of: FeedCommentResponse.self) { response in
                 switch response.result {
                 case .success(let response):
-                    vc.SuccessFollowing(response)
+                    vc.SuccessFeedComment(response)
                 case .failure(let error):
                     print(error.localizedDescription)
-                    vc.failedToFollowing(message: "서버와의 연결이 원활하지 않습니다")
+                    vc.failedToFeedComment(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
     }

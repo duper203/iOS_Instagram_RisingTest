@@ -15,9 +15,20 @@ class HomeViewController: UIViewController{
     
     let imagePickerController = UIImagePickerController()
     
+    //DataManager
+    lazy var dataManagerOne: FeedDataManger = FeedDataManger()
+    var FeedData: [FeedResult] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = true
+        
+        //GET
+        dataManagerOne.FeedItem(vc: self)
+            
+            
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -32,6 +43,9 @@ class HomeViewController: UIViewController{
         
         //imagepicker
         imagePickerController.delegate = self
+        
+        
+        
         
     }
     
@@ -59,13 +73,27 @@ class HomeViewController: UIViewController{
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+            return 2
+        }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if section == 0{
+            return 1
+        }else{
+            print("cell몇개")
+            print(FeedData.count)
+            return FeedData.count
+        }
+        
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.row == 0){
+        if (indexPath.section == 0){
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else{
                 return UITableViewCell()
             }
@@ -76,16 +104,35 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else{
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
             
             //까먹으면 안됨
             cell.delegate = self
+            cell.selectionStyle = .none
+            
+            if let urlString = FeedData[indexPath.row].userImage{
+                print(urlString)
+                
+                let url = URL(string: urlString)
+                cell.userProfile.kf.setImage(with: url)
+            }
+            if let urlString = FeedData[indexPath.row].image{
+                let url = URL(string: urlString)
+                cell.imageViewFeed.kf.setImage(with: url)
+            }
+            
+            let userNameString = FeedData[indexPath.row].userId!
+            let likeString = FeedData[indexPath.row].likeCount!
+            
+            cell.userName.text = "\( userNameString)"
+            cell.explainLabel.text = FeedData[indexPath.row].content
+            cell.likesBtn.setTitle("좋아요 \( likeString)개", for: .normal)
+            
             return cell
         }
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.row == 0){
+        if (indexPath.section == 0){
             return 80
         }else{
             return 600
@@ -96,6 +143,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     //(3) display되면서 collectionview 셀 설정
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
         guard let tableViewCell = cell as? StoryTableViewCell else {
             return
         }
@@ -117,6 +165,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as? StoryCollectionViewCell else{
             return UICollectionViewCell()
         }
+        
+        
         return cell
     }
     
@@ -127,19 +177,58 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        <#code#>
-//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            print(image)
+        }
+    }
     
 }
 
 extension HomeViewController: CellDelegate{
+    func recommendFollowTap() {
+    }
+    
+    
     func buttondidtap() {
         print("protocol")
+        
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+        
 
     }
     
     
 }
+
+
+//GET
+extension HomeViewController {
+    
+    //FEED
+    func SuccessFeed(_ result: FeedResponse) {
+        print("홈 화면 피드 화면 정보 가져오기 성공!\(result.message!)")
+        print(result.result)
+        FeedData = result.result
+        print(FeedData.count)
+
+        tableView.reloadData()
+    }
+    func failedToFeed(message: String) {
+        print("\(message)")
+    }
+    
+    
+    
+    //FEED Likes
+//    func SuccessFeedLikes(_ result: FeedResponse) {
+//        print("홈 화면 피드 화면 정보 가져오기 성공!\(result.message!)")
+//        tableView.reloadData()
+//    }
+//    func failedToFeedLikes(message: String) {
+//        print("\(message)")
+//    }
+}
+

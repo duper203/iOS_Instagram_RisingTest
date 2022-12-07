@@ -9,5 +9,5 @@ import Foundation
 struct Constant {
     static let BASE_URL = "https://roba0704.site/app"
     static var jwtToken = ""
-    static var userIdx: Int = 0
+    
 }
