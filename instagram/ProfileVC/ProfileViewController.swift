@@ -9,19 +9,24 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController{
-    //DataManager
+    //MARK - DataManager: 프로필 피드
     lazy var dataManager: MyFeedDataManager = MyFeedDataManager()
     var MyFeedData: [MyFeedResult] = []
+    //MARK - DataManager: 프로필 정보
     
+    lazy var dataManagerTwo: MyInfoDataManager = MyInfoDataManager()
+    var MyInfoData: MyInfoResult = MyInfoResult()
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //GET
+        //MARK - GET 호출
         dataManager.MyFeedItem(vc: self)
+        dataManagerTwo.MyInfoItem(vc: self)
         
-        
+        //MARK - collectionview setup
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -66,6 +71,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as? ProfileCollectionViewCell else{
                 return UICollectionViewCell()
             }
+            if let urlString = MyInfoData.imageUrl{
+                print(urlString)
+                
+                let url = URL(string: urlString)
+                cell.profileImageView.kf.setImage(with: url)
+            }
+            
+            cell.UserName.text = MyInfoData.name
+            cell.userContent.text = MyInfoData.content
+            
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCellTwo", for: indexPath) as? ProfileCollectionViewCellTwo else{
@@ -129,15 +144,20 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
 extension ProfileViewController{
     func SuccessMyFeed(_ result: MyFeedResponse) {
         print("프로필 화면 정보 가져오기 성공!\(result.message!)")
-        
         print(result.result)
         MyFeedData = result.result
         collectionView.reloadData()
-        
     }
     
-    func failedToMyFeed(message: String) {
-        
-        print("\(message)")
-//        self.presentAlert(title: message)
-    }}
+    func failedToMyFeed(message: String) { print("\(message)") }
+    
+    func SuccessMyInfo(_ result: MyInfoResponse) {
+        print("프로필 user 정보 가져오기 성공!\(result.message!)")
+        print(result.result)
+        MyInfoData = result.result
+        collectionView.reloadData()
+    }
+    
+    func failedToMyInfo(message: String) { print("\(message)") }
+    
+}

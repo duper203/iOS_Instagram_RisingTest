@@ -26,6 +26,9 @@
 		8B9F0C55294021F3003E2DD5 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C54294021F3003E2DD5 /* SearchDataManager.swift */; };
 		8B9F0C582940291E003E2DD5 /* MyFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C572940291E003E2DD5 /* MyFeedResponse.swift */; };
 		8B9F0C5A29402930003E2DD5 /* MyFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C5929402930003E2DD5 /* MyFeedDataManager.swift */; };
+		8B9F0C5D29402C26003E2DD5 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C5C29402C26003E2DD5 /* UserInfoResponse.swift */; };
+		8B9F0C5F29402C39003E2DD5 /* UserInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C5E29402C39003E2DD5 /* UserInfoDataManager.swift */; };
+		8B9F0C6329408734003E2DD5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C6229408734003E2DD5 /* DetailViewController.swift */; };
 		8BB6A8952937712B008E34C3 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A8942937712B008E34C3 /* DMViewController.swift */; };
 		8BB6A898293771DB008E34C3 /* DMTableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */; };
 		8BB6A899293771DB008E34C3 /* DMTableViewCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */; };
@@ -112,6 +115,9 @@
 		8B9F0C54294021F3003E2DD5 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		8B9F0C572940291E003E2DD5 /* MyFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedResponse.swift; sourceTree = "<group>"; };
 		8B9F0C5929402930003E2DD5 /* MyFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedDataManager.swift; sourceTree = "<group>"; };
+		8B9F0C5C29402C26003E2DD5 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		8B9F0C5E29402C39003E2DD5 /* UserInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDataManager.swift; sourceTree = "<group>"; };
+		8B9F0C6229408734003E2DD5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8BB6A8942937712B008E34C3 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTableViewCellOne.swift; sourceTree = "<group>"; };
 		8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMTableViewCellOne.xib; sourceTree = "<group>"; };
@@ -259,6 +265,8 @@
 		8B9F0C5B29402BAA003E2DD5 /* UserInfo(GET) */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F0C5C29402C26003E2DD5 /* UserInfoResponse.swift */,
+				8B9F0C5E29402C39003E2DD5 /* UserInfoDataManager.swift */,
 			);
 			path = "UserInfo(GET)";
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 				8B9F0C51294021BC003E2DD5 /* SearchList(GET) */,
 				8BE9C4A229350D05007CC965 /* SearchViewController.swift */,
 				8BE9C4A4293510C0007CC965 /* SearchVCCell */,
+				8B9F0C6229408734003E2DD5 /* DetailViewController.swift */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -652,8 +661,10 @@
 				8BB6A8952937712B008E34C3 /* DMViewController.swift in Sources */,
 				8BE9C48D29347F8A007CC965 /* StoryTableViewCell.swift in Sources */,
 				8BB7AC3D2933345E0024C219 /* ViewController.swift in Sources */,
+				8B9F0C5D29402C26003E2DD5 /* UserInfoResponse.swift in Sources */,
 				8BE9C4BB2936F06A007CC965 /* RegisterPhoneViewController.swift in Sources */,
 				8BBD4D632936F91B00044BF5 /* ShopCollectionViewCellTwo.swift in Sources */,
+				8B9F0C6329408734003E2DD5 /* DetailViewController.swift in Sources */,
 				8B9F0C5A29402930003E2DD5 /* MyFeedDataManager.swift in Sources */,
 				8B9F0C32293DD223003E2DD5 /* RegisterLastVC.swift in Sources */,
 				8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */,
@@ -670,6 +681,7 @@
 				8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */,
 				8BE9C4982934BAF3007CC965 /* ProfileCollectionViewCell.swift in Sources */,
 				8B9F0C38293E1603003E2DD5 /* SignInResponse.swift in Sources */,
+				8B9F0C5F29402C39003E2DD5 /* UserInfoDataManager.swift in Sources */,
 				8B9F0C47293EE769003E2DD5 /* ShopDataManager.swift in Sources */,
 				8BBD4D5C2936F80700044BF5 /* ShopViewController.swift in Sources */,
 				8B9F0C4C293F7440003E2DD5 /* ReelsResponse.swift in Sources */,

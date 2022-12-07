@@ -9,8 +9,11 @@ import UIKit
 
 class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var addProfileBtn: UIButton!
     
+    @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var userContent: UILabel!
+    
+    @IBOutlet weak var addProfileBtn: UIButton!
     @IBOutlet weak var recommendFollowingBtn: UIButton!
     @IBOutlet weak var updateProfileBtn: UIButton!
     

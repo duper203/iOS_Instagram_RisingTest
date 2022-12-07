@@ -154,10 +154,12 @@
             </constraints>
             <size key="customSize" width="402" height="182"/>
             <connections>
+                <outlet property="UserName" destination="acG-q6-4a8" id="5Gr-Ju-Ij6"/>
                 <outlet property="addProfileBtn" destination="gmF-YE-Cn4" id="M5D-Do-oy7"/>
                 <outlet property="profileImageView" destination="zLS-T6-VXc" id="UE0-bp-1AN"/>
                 <outlet property="recommendFollowingBtn" destination="OCK-Ha-Egv" id="R40-8c-JMZ"/>
                 <outlet property="updateProfileBtn" destination="1cu-na-82i" id="sAh-fJ-CiM"/>
+                <outlet property="userContent" destination="RnN-tt-pJv" id="H4p-od-4hI"/>
             </connections>
             <point key="canvasLocation" x="253.43511450381678" y="35.211267605633807"/>
         </collectionViewCell>

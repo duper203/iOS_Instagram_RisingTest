@@ -62,6 +62,21 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        
+        print(indexPath.row)
+        
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+        detailResult.userId = searchData[indexPath.item].userId!
+        detailResult.content = searchData[indexPath.item].content
+        detailResult.image = searchData[indexPath.item].image
+        detailResult.likeFlag = searchData[indexPath.item].likeFlag!
+        
+        
+        }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let side = CGFloat((collectionView.frame.width / 3) - (4/3))
@@ -91,5 +106,4 @@ extension SearchViewController{
     func failedToSearch(message: String) {
         
         print("\(message)")
-//        self.presentAlert(title: message)
     }}

@@ -20,5 +20,8 @@ struct SearchResult: Decodable {
     var status : Int?
     var createdAt: String?
     var image : String?
+    var likeFlag : Int?
 
 }
+
+
