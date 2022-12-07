@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		47BD7F3EE5313A21A8BFC51D /* Pods_instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8686EC0225EE1BC0ABC6D2E0 /* Pods_instagram.framework */; };
+		8B0BB79D2940A9810034393B /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79C2940A9810034393B /* FollowingResponse.swift */; };
+		8B0BB79F2940A9940034393B /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79E2940A9940034393B /* FollowerResponse.swift */; };
+		8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */; };
 		8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A801D2933C58500BB985E /* LoginVC.swift */; };
 		8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A801F2933C66800BB985E /* RegisterVC.swift */; };
 		8B9F0C32293DD223003E2DD5 /* RegisterLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C31293DD223003E2DD5 /* RegisterLastVC.swift */; };
@@ -29,6 +32,7 @@
 		8B9F0C5D29402C26003E2DD5 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C5C29402C26003E2DD5 /* UserInfoResponse.swift */; };
 		8B9F0C5F29402C39003E2DD5 /* UserInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C5E29402C39003E2DD5 /* UserInfoDataManager.swift */; };
 		8B9F0C6329408734003E2DD5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C6229408734003E2DD5 /* DetailViewController.swift */; };
+		8B9F0C6729409FEB003E2DD5 /* MyFeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C6629409FEB003E2DD5 /* MyFeedDetailViewController.swift */; };
 		8BB6A8952937712B008E34C3 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A8942937712B008E34C3 /* DMViewController.swift */; };
 		8BB6A898293771DB008E34C3 /* DMTableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */; };
 		8BB6A899293771DB008E34C3 /* DMTableViewCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */; };
@@ -97,6 +101,9 @@
 
 /* Begin PBXFileReference section */
 		8686EC0225EE1BC0ABC6D2E0 /* Pods_instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0BB79C2940A9810034393B /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
+		8B0BB79E2940A9940034393B /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
+		8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingDataManager.swift; sourceTree = "<group>"; };
 		8B4A801D2933C58500BB985E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8B4A801F2933C66800BB985E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		8B9F0C31293DD223003E2DD5 /* RegisterLastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLastVC.swift; sourceTree = "<group>"; };
@@ -118,6 +125,7 @@
 		8B9F0C5C29402C26003E2DD5 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
 		8B9F0C5E29402C39003E2DD5 /* UserInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDataManager.swift; sourceTree = "<group>"; };
 		8B9F0C6229408734003E2DD5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8B9F0C6629409FEB003E2DD5 /* MyFeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedDetailViewController.swift; sourceTree = "<group>"; };
 		8BB6A8942937712B008E34C3 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTableViewCellOne.swift; sourceTree = "<group>"; };
 		8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMTableViewCellOne.xib; sourceTree = "<group>"; };
@@ -214,6 +222,16 @@
 				B068A617387EA60914AEEB26 /* Pods-instagram.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B0BB79B2940A9640034393B /* Following&Follower(GET) */ = {
+			isa = PBXGroup;
+			children = (
+				8B0BB79C2940A9810034393B /* FollowingResponse.swift */,
+				8B0BB79E2940A9940034393B /* FollowerResponse.swift */,
+				8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */,
+			);
+			path = "Following&Follower(GET)";
 			sourceTree = "<group>";
 		};
 		8B9F0C40293EE047003E2DD5 /* SignIn(POST) */ = {
@@ -337,10 +355,12 @@
 		8BBD4D562936F64400044BF5 /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
-				8B9F0C5B29402BAA003E2DD5 /* UserInfo(GET) */,
-				8B9F0C56294028FD003E2DD5 /* MyFeed(GET) */,
 				8BE9C4932934B69D007CC965 /* ProfileViewController.swift */,
 				8BE9C4952934BACF007CC965 /* ProfileVCCell */,
+				8B0BB79B2940A9640034393B /* Following&Follower(GET) */,
+				8B9F0C5B29402BAA003E2DD5 /* UserInfo(GET) */,
+				8B9F0C56294028FD003E2DD5 /* MyFeed(GET) */,
+				8B9F0C6629409FEB003E2DD5 /* MyFeedDetailViewController.swift */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -646,6 +666,7 @@
 			files = (
 				8BE9C4A329350D05007CC965 /* SearchViewController.swift in Sources */,
 				8BB6A898293771DB008E34C3 /* DMTableViewCellOne.swift in Sources */,
+				8B0BB79D2940A9810034393B /* FollowingResponse.swift in Sources */,
 				8BE9C4B32935E00C007CC965 /* UploadViewController.swift in Sources */,
 				8BE9C4912934857C007CC965 /* StoryCollectionViewCell.swift in Sources */,
 				8BE9C4A7293510DE007CC965 /* FeedCollectionViewCell.swift in Sources */,
@@ -669,6 +690,8 @@
 				8B9F0C32293DD223003E2DD5 /* RegisterLastVC.swift in Sources */,
 				8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */,
 				8BE9C4942934B69D007CC965 /* ProfileViewController.swift in Sources */,
+				8B0BB79F2940A9940034393B /* FollowerResponse.swift in Sources */,
+				8B9F0C6729409FEB003E2DD5 /* MyFeedDetailViewController.swift in Sources */,
 				8B9F0C582940291E003E2DD5 /* MyFeedResponse.swift in Sources */,
 				8B9F0C50293F82A4003E2DD5 /* ReelsCell.swift in Sources */,
 				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
@@ -680,6 +703,7 @@
 				8BE9C4AE29351B75007CC965 /* ReelsTableViewCell.swift in Sources */,
 				8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */,
 				8BE9C4982934BAF3007CC965 /* ProfileCollectionViewCell.swift in Sources */,
+				8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */,
 				8B9F0C38293E1603003E2DD5 /* SignInResponse.swift in Sources */,
 				8B9F0C5F29402C39003E2DD5 /* UserInfoDataManager.swift in Sources */,
 				8B9F0C47293EE769003E2DD5 /* ShopDataManager.swift in Sources */,

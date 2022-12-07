@@ -24,3 +24,17 @@ struct SearchIndexResult{
 }
 
 var detailResult : SearchIndexResult = SearchIndexResult()
+
+struct MyFeedIndexResult{
+    
+    var feedId : Int?
+    var userId : Int = 0
+    var content : String?
+    var status : Int?
+    var createdAt: String?
+    var image : String?
+    var likeFlag: Int = 0
+
+}
+
+var MyFeedDetailResult : MyFeedIndexResult = MyFeedIndexResult()

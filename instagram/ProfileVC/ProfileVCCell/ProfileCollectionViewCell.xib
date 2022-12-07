@@ -156,6 +156,8 @@
             <connections>
                 <outlet property="UserName" destination="acG-q6-4a8" id="5Gr-Ju-Ij6"/>
                 <outlet property="addProfileBtn" destination="gmF-YE-Cn4" id="M5D-Do-oy7"/>
+                <outlet property="feedCountLabel" destination="3hc-kG-yeR" id="fNu-gt-8RF"/>
+                <outlet property="followingNum" destination="ZY8-uK-ojb" id="PDF-8n-9FK"/>
                 <outlet property="profileImageView" destination="zLS-T6-VXc" id="UE0-bp-1AN"/>
                 <outlet property="recommendFollowingBtn" destination="OCK-Ha-Egv" id="R40-8c-JMZ"/>
                 <outlet property="updateProfileBtn" destination="1cu-na-82i" id="sAh-fJ-CiM"/>

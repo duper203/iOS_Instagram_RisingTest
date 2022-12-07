@@ -10,6 +10,7 @@ import UIKit
 class ProfileCollectionViewCellThree: UICollectionViewCell {
 
     @IBOutlet weak var myFeedImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

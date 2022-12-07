@@ -17,6 +17,8 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var recommendFollowingBtn: UIButton!
     @IBOutlet weak var updateProfileBtn: UIButton!
     
+    @IBOutlet weak var feedCountLabel: UILabel!
+    @IBOutlet weak var followingNum: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

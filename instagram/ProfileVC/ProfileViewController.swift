@@ -9,13 +9,20 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController{
+    
     //MARK - DataManager: 프로필 피드
     lazy var dataManager: MyFeedDataManager = MyFeedDataManager()
     var MyFeedData: [MyFeedResult] = []
-    //MARK - DataManager: 프로필 정보
     
+    //MARK - DataManager: 프로필 정보
     lazy var dataManagerTwo: MyInfoDataManager = MyInfoDataManager()
     var MyInfoData: MyInfoResult = MyInfoResult()
+    
+    //MARK - DataManager: 팔로워 팔로잉 정보
+    lazy var dataManagerThree: FollowingDataManager = FollowingDataManager()
+    var FollowingCount = 0
+    var FollowingListData: userList = userList()
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,6 +32,7 @@ class ProfileViewController: UIViewController{
         //MARK - GET 호출
         dataManager.MyFeedItem(vc: self)
         dataManagerTwo.MyInfoItem(vc: self)
+        dataManagerThree.FollowingItem(vc: self)
         
         //MARK - collectionview setup
         collectionView.delegate = self
@@ -80,7 +88,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             
             cell.UserName.text = MyInfoData.name
             cell.userContent.text = MyInfoData.content
-            
+            cell.followingNum.text = "\(String(describing: FollowingCount))"
+            cell.feedCountLabel.text = "\(String(describing: MyFeedData.count))"
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCellTwo", for: indexPath) as? ProfileCollectionViewCellTwo else{
@@ -99,9 +108,23 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
             return cell
         }
-    
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        
+        print(indexPath.row)
+        
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MyFeedDetailViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+        MyFeedDetailResult.userId = MyFeedData[indexPath.item].userId!
+        MyFeedDetailResult.content = MyFeedData[indexPath.item].content
+        MyFeedDetailResult.image = MyFeedData[indexPath.item].image
+        MyFeedDetailResult.likeFlag = MyFeedData[indexPath.item].likeFlag!
+        
+        
+        }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -160,4 +183,15 @@ extension ProfileViewController{
     
     func failedToMyInfo(message: String) { print("\(message)") }
     
+    func SuccessFollowing(_ result: FollowingResponse) {
+        print("팔로잉 정보 가져오기 성공!\(result.message!)")
+        print(result.result)
+//        FollowingListData = result.result.userList
+        FollowingCount = result.result.count!
+        collectionView.reloadData()
+        print("팔로잉 수")
+        print(FollowingCount)
+    }
+    
+    func failedToFollowing(message: String) { print("\(message)") }
 }

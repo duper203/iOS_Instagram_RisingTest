@@ -17,5 +17,9 @@ struct MyFeedResult: Decodable {
     var feedId : Int?
     var userId : Int?
     var image : String?
+    var content : String?
+    var likeFlag: Int?
+
+
 }
 
