@@ -17,10 +17,10 @@ class MyFeedDetailViewController: UIViewController{
     @IBOutlet weak var detailTextLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     
-//    @IBAction func dismissBtn(_ sender: Any) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-//
+    @IBAction func dismissBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
     override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -32,7 +32,7 @@ class MyFeedDetailViewController: UIViewController{
         let urlprofile = URL(string: MyFeedDetailResult.userimage!)
         userImageView.kf.setImage(with: urlprofile)
         
-        let urlprofile = URL(string: MyFeedDetailResult.image!)
+        let url = URL(string: MyFeedDetailResult.image!)
         image.kf.setImage(with: url)
 
 

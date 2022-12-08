@@ -20,7 +20,8 @@ class FollowRecommendViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = true
+
         dataManager.RecommendItem(vc: self)
         
         //tableview

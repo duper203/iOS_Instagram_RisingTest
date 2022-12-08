@@ -11,8 +11,18 @@ protocol CellDelegate: AnyObject{
     func buttondidtap()
     func recommendFollowTap()
 }
+protocol CellDelegateTwo: AnyObject{
+    func recommendFollowTap()
+}
 
 
+//홈화면(1) 댓글창에 전의 정보 가져가기
+struct MyComment{
+    var imageUrl : String?
+    var userid : String?
+    var content : String?
+}
+var mycomment : MyComment = MyComment()
 
 //홈화면(2) cell누를 때 상세정보 화면전환시 데이터 전달로 사용
 

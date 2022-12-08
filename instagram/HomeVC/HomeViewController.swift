@@ -112,19 +112,34 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             if let urlString = FeedData[indexPath.row].userImage{
                 print(urlString)
                 
+                //댓글창에 넘길 유저 프로필
+                mycomment.imageUrl = urlString
+                
                 let url = URL(string: urlString)
+                
                 cell.userProfile.kf.setImage(with: url)
             }
+            
             if let urlString = FeedData[indexPath.row].image{
                 let url = URL(string: urlString)
                 cell.imageViewFeed.kf.setImage(with: url)
             }
             
             let userNameString = FeedData[indexPath.row].userId!
+            
+            //댓글창에 넘길 유저 아이디
+            mycomment.userid = "\( userNameString)"
+            
             let likeString = FeedData[indexPath.row].likeCount!
             
             cell.userName.text = "\( userNameString)"
+            
+            //댓글창에 넘길 피드의 상세내용
+            mycomment.content = FeedData[indexPath.row].content
+            
             cell.explainLabel.text = FeedData[indexPath.row].content
+            
+            
             cell.likesBtn.setTitle("좋아요 \( likeString)개", for: .normal)
             
             return cell
@@ -186,9 +201,6 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
 }
 
 extension HomeViewController: CellDelegate{
-    func recommendFollowTap() {
-    }
-    
     
     func buttondidtap() {
         print("protocol")

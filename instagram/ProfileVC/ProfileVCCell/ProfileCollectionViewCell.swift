@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileCollectionViewCell: UICollectionViewCell {
-    var delegate: CellDelegate?
+    var delegate: CellDelegateTwo?
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var UserName: UILabel!

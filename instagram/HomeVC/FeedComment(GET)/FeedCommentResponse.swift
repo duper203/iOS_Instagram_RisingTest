@@ -19,5 +19,6 @@ struct FeedCommentResult: Decodable {
     var commentId: Int?
     var content: String?
     var userId: Int?
+    var image : String?
     
 }

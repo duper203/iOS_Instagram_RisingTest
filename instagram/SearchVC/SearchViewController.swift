@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class SearchViewController: UIViewController, UISearchResultsUpdating{
+    
+    
     //DataManager
     lazy var dataManager: SearchDataManager = SearchDataManager()
     var searchData: [SearchResult] = []
@@ -23,9 +25,9 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
 
-                
+//        navigationController?.isNavigationBarHidden = true
 //        //searchController
 //        searchController.searchResultsUpdater = self
 //        navigationItem.searchController = searchController

@@ -788,7 +788,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fuH-TH-KeH">
-                                <rect key="frame" x="0.0" y="106" width="393" height="712"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLD-R8-TIq">
@@ -814,7 +814,7 @@
                         <viewLayoutGuide key="safeArea" id="YSy-do-eug"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fuH-TH-KeH" firstAttribute="top" secondItem="YSy-do-eug" secondAttribute="top" constant="47" id="KNT-dv-ZLS"/>
+                            <constraint firstItem="fuH-TH-KeH" firstAttribute="top" secondItem="YSy-do-eug" secondAttribute="top" constant="44" id="KNT-dv-ZLS"/>
                             <constraint firstItem="MLD-R8-TIq" firstAttribute="top" secondItem="YSy-do-eug" secondAttribute="top" id="OyL-q9-aqt"/>
                             <constraint firstItem="YSy-do-eug" firstAttribute="bottom" secondItem="fuH-TH-KeH" secondAttribute="bottom" id="UHL-a0-GX7"/>
                             <constraint firstItem="fuH-TH-KeH" firstAttribute="leading" secondItem="YSy-do-eug" secondAttribute="leading" id="hFg-YZ-NbN"/>
@@ -928,7 +928,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Eio-EQ-X7Q" id="W9S-KS-NFt"/>
-                        <segue destination="uMK-o9-B8n" kind="presentation" identifier="goToComment" modalPresentationStyle="fullScreen" id="wzK-yP-SHI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84l-Pe-7K5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1030,20 +1029,37 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-0u-bk0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="댓글" id="tTj-HH-eDP">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="ayJ-sg-MK8">
+                                            <color key="tintColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismiss:" destination="uMK-o9-B8n" id="xZa-Pg-dpy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xod-pG-MdS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="imj-0Q-a5g" firstAttribute="top" secondItem="jLq-Sr-OXu" secondAttribute="bottom" id="2B6-pN-ho6"/>
-                            <constraint firstItem="jLq-Sr-OXu" firstAttribute="top" secondItem="Xod-pG-MdS" secondAttribute="top" id="63n-Lp-gou"/>
+                            <constraint firstItem="RnK-0u-bk0" firstAttribute="trailing" secondItem="Xod-pG-MdS" secondAttribute="trailing" id="CnS-E1-aa5"/>
                             <constraint firstItem="imj-0Q-a5g" firstAttribute="trailing" secondItem="Xod-pG-MdS" secondAttribute="trailing" id="JuZ-Rn-aLF"/>
                             <constraint firstItem="imj-0Q-a5g" firstAttribute="leading" secondItem="Xod-pG-MdS" secondAttribute="leading" id="KPi-g7-GSw"/>
+                            <constraint firstItem="jLq-Sr-OXu" firstAttribute="top" secondItem="RnK-0u-bk0" secondAttribute="bottom" id="Kd8-Zd-cH9"/>
+                            <constraint firstItem="RnK-0u-bk0" firstAttribute="top" secondItem="Xod-pG-MdS" secondAttribute="top" id="LAh-ud-6Ox"/>
+                            <constraint firstItem="RnK-0u-bk0" firstAttribute="leading" secondItem="Xod-pG-MdS" secondAttribute="leading" id="eQp-lD-ZQn"/>
                             <constraint firstAttribute="bottom" secondItem="imj-0Q-a5g" secondAttribute="bottom" id="hj3-fb-MI9"/>
                             <constraint firstItem="Xod-pG-MdS" firstAttribute="trailing" secondItem="jLq-Sr-OXu" secondAttribute="trailing" id="isD-cA-s0f"/>
                             <constraint firstItem="jLq-Sr-OXu" firstAttribute="leading" secondItem="Xod-pG-MdS" secondAttribute="leading" id="zcg-wg-20W"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="jLq-Sr-OXu" id="6o1-H3-WpN"/>
@@ -1052,7 +1068,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dep-Sc-gVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-927.48091603053433" y="2380.2816901408451"/>
+            <point key="canvasLocation" x="-850" y="1737"/>
         </scene>
         <!--Notify View Controller-->
         <scene sceneID="X6c-lN-xua">
@@ -1568,7 +1584,7 @@
         <!--My Feed Detail View Controller-->
         <scene sceneID="LdY-27-TxD">
             <objects>
-                <viewController storyboardIdentifier="MyFeedDetailViewController" id="qMQ-a1-hYd" customClass="MyFeedDetailViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyFeedDetailViewController" modalPresentationStyle="fullScreen" id="qMQ-a1-hYd" customClass="MyFeedDetailViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLE-fv-fSM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

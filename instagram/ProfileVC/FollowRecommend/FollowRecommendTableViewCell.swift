@@ -18,6 +18,8 @@ class FollowRecommendTableViewCell: UITableViewCell {
         profileImageView.layer.cornerRadius = 33
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderWidth = 1
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

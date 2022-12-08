@@ -16,18 +16,23 @@ class CommentViewController:UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func dismiss(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     //DataManager
     lazy var dataManager: FeedCommentDataManger = FeedCommentDataManger()
     var FeedCommentData: [FeedCommentResult] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //GET
+        userProfileImage.layer.cornerRadius = 25
+        userProfileImage.clipsToBounds = true
+
         dataManager.FeedCommentItem(vc: self)
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         //feedtableviewcell 등록
         let feedNib = UINib(nibName: "CommentTableViewCell", bundle: nil)
@@ -46,7 +51,7 @@ extension CommentViewController: UITableViewDelegate, UITableViewDataSource{
         if section == 0{
             return 1
         }else{
-            return 5
+            return FeedCommentData.count
         }
         
     }
@@ -58,12 +63,37 @@ extension CommentViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            
+            //해당 피드게시글의 유저 프로필 사진
+            let urlString = mycomment.imageUrl!
+            let url = URL(string: urlString)
+            cell.userImage.kf.setImage(with: url)
+            
+            //해당 게시글 유저의 상세 내용
+            let mycontent = mycomment.content!
+            
+            //해당 게시글 유저의 프로필 사진
+            let myId = mycomment.userid!
+            cell.commentLabel.text = "USER\(myId)  \(mycontent)"
+            
+            
             return cell
             
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell else{
                 return UITableViewCell()
             }
+            //댓글 쓴 유저 아이디
+            let commentUserId = FeedCommentData[indexPath.row].userId!
+            //댓글 내용
+            let commentContent = FeedCommentData[indexPath.row].content!
+            
+            cell.commentLabel.text = "USER\(commentUserId)  \(commentContent)"
+            
+            //유저 프로필 사진
+            let urlString = FeedCommentData[indexPath.row].image!
+            let url = URL(string: urlString)
+            cell.userImage.kf.setImage(with: url)
             
             
             return cell
@@ -74,7 +104,9 @@ extension CommentViewController: UITableViewDelegate, UITableViewDataSource{
         if (indexPath.section == 0){
             return 80
         }else{
-            return 50
+            return 65
+            
+        
         }
     }
     

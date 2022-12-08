@@ -9,9 +9,14 @@ import UIKit
 
 class CommentTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var commentLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        userImage.layer.cornerRadius = 20
+        userImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
