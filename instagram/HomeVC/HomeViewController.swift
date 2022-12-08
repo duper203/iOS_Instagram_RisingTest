@@ -109,6 +109,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             cell.delegate = self
             cell.selectionStyle = .none
             
+            //피드 아이디 선정
+            feedIdLikes = FeedData[indexPath.row].feedId!
+            print(feedIdLikes)
+            
             if let urlString = FeedData[indexPath.row].userImage{
                 print(urlString)
                 
@@ -202,14 +206,18 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
 
 extension HomeViewController: CellDelegate{
     
+    
     func buttondidtap() {
         print("protocol")
         
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
-        
-        
 
+    }
+    func taptoLikes(){
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "LikesViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+        
     }
     
     

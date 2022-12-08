@@ -20,6 +20,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var followingNum: UILabel!
     
     @IBAction func recommendFollowingBtn(_ sender: Any) {
+        
         self.delegate?.recommendFollowTap()
 
         

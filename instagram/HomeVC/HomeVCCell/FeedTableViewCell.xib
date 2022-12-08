@@ -138,6 +138,9 @@
                         <state key="normal" title="좋아요 개수">
                             <color key="titleColor" red="0.078774772579999999" green="0.04534756392" blue="0.10588840400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
+                        <connections>
+                            <action selector="likesBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7eq-M3-XJL"/>
+                        </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pbC-RC-uOi">
                         <rect key="frame" x="10" y="466" width="298" height="25"/>

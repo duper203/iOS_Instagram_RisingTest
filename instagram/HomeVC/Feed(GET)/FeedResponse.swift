@@ -15,7 +15,7 @@ struct FeedResponse: Decodable {
 
 struct FeedResult: Decodable {
     
-    var feeId: Int?
+    var feedId: Int?
     var userId: Int?
     var name: String?
     var userImage: String?

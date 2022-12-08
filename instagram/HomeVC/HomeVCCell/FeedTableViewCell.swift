@@ -29,6 +29,13 @@ class FeedTableViewCell: UITableViewCell {
         self.delegate?.buttondidtap()
     }
     
+    //좋아요 목록으로 넘어가기
+    @IBAction func likesBtn(_ sender: Any) {
+        self.delegate?.taptoLikes()
+
+    }
+    
+    
     @IBOutlet weak var userProfileTwo: UIImageView!
     
     @IBAction func btnHeart(_ sender: Any) {

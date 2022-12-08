@@ -1174,6 +1174,53 @@
             </objects>
             <point key="canvasLocation" x="1292" y="1718"/>
         </scene>
+        <!--Likes View Controller-->
+        <scene sceneID="jsA-Tc-5IS">
+            <objects>
+                <viewController storyboardIdentifier="LikesViewController" id="WmX-9w-tns" customClass="LikesViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nX-Fj-B28">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-qY-YUn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="좋아요" id="K0B-ym-abC">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="hFl-w8-rxR">
+                                            <color key="tintColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismissBtn:" destination="WmX-9w-tns" id="ra1-pI-lql"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-l5-qUZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uy5-dN-bTP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uy5-dN-bTP" firstAttribute="trailing" secondItem="wgd-l5-qUZ" secondAttribute="trailing" id="Jnm-JK-ccM"/>
+                            <constraint firstItem="wgd-l5-qUZ" firstAttribute="top" secondItem="Ck5-qY-YUn" secondAttribute="bottom" id="LcE-vl-085"/>
+                            <constraint firstItem="Ck5-qY-YUn" firstAttribute="trailing" secondItem="uy5-dN-bTP" secondAttribute="trailing" id="QEN-N0-vJw"/>
+                            <constraint firstItem="uy5-dN-bTP" firstAttribute="bottom" secondItem="wgd-l5-qUZ" secondAttribute="bottom" id="bp0-Rq-FQh"/>
+                            <constraint firstItem="Ck5-qY-YUn" firstAttribute="leading" secondItem="uy5-dN-bTP" secondAttribute="leading" id="dUu-Gd-NVx"/>
+                            <constraint firstItem="wgd-l5-qUZ" firstAttribute="leading" secondItem="uy5-dN-bTP" secondAttribute="leading" id="h3N-Yp-pYc"/>
+                            <constraint firstItem="Ck5-qY-YUn" firstAttribute="top" secondItem="uy5-dN-bTP" secondAttribute="top" id="iAH-vq-WuI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wgd-l5-qUZ" id="jPD-cp-nry"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuO-iN-15F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="2397"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I1X-6G-m9X">
             <objects>

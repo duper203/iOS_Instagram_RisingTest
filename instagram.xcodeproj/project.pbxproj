@@ -17,6 +17,13 @@
 		8B0AAAC62941904000DA77AA /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAC52941904000DA77AA /* ShopDetailViewController.swift */; };
 		8B0AAAC9294192F100DA77AA /* ShopDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAC8294192F100DA77AA /* ShopDetailResponse.swift */; };
 		8B0AAACB2941933300DA77AA /* ShopDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAACA2941933300DA77AA /* ShopDetailDataManager.swift */; };
+		8B0AAACD2941E46100DA77AA /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAACC2941E46100DA77AA /* LikesViewController.swift */; };
+		8B0AAAD32941E62800DA77AA /* FeedLikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAD22941E62800DA77AA /* FeedLikesResponse.swift */; };
+		8B0AAAD52941E63F00DA77AA /* FeedLikesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAD42941E63E00DA77AA /* FeedLikesDataManager.swift */; };
+		8B0AAAD92941ECCA00DA77AA /* LikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAD72941ECCA00DA77AA /* LikesTableViewCell.swift */; };
+		8B0AAADA2941ECCA00DA77AA /* LikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AAAD82941ECCA00DA77AA /* LikesTableViewCell.xib */; };
+		8B0AAADD2941ECFE00DA77AA /* LikesTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAADB2941ECFE00DA77AA /* LikesTableViewCellTwo.swift */; };
+		8B0AAADE2941ECFE00DA77AA /* LikesTableViewCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */; };
 		8B0BB79D2940A9810034393B /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79C2940A9810034393B /* FollowingResponse.swift */; };
 		8B0BB79F2940A9940034393B /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79E2940A9940034393B /* FollowerResponse.swift */; };
 		8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */; };
@@ -126,6 +133,13 @@
 		8B0AAAC52941904000DA77AA /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		8B0AAAC8294192F100DA77AA /* ShopDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailResponse.swift; sourceTree = "<group>"; };
 		8B0AAACA2941933300DA77AA /* ShopDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailDataManager.swift; sourceTree = "<group>"; };
+		8B0AAACC2941E46100DA77AA /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
+		8B0AAAD22941E62800DA77AA /* FeedLikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikesResponse.swift; sourceTree = "<group>"; };
+		8B0AAAD42941E63E00DA77AA /* FeedLikesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikesDataManager.swift; sourceTree = "<group>"; };
+		8B0AAAD72941ECCA00DA77AA /* LikesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesTableViewCell.swift; sourceTree = "<group>"; };
+		8B0AAAD82941ECCA00DA77AA /* LikesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesTableViewCell.xib; sourceTree = "<group>"; };
+		8B0AAADB2941ECFE00DA77AA /* LikesTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesTableViewCellTwo.swift; sourceTree = "<group>"; };
+		8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesTableViewCellTwo.xib; sourceTree = "<group>"; };
 		8B0BB79C2940A9810034393B /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
 		8B0BB79E2940A9940034393B /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
 		8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingDataManager.swift; sourceTree = "<group>"; };
@@ -272,6 +286,55 @@
 				8B0AAACA2941933300DA77AA /* ShopDetailDataManager.swift */,
 			);
 			path = "ShopDetail(GET)";
+			sourceTree = "<group>";
+		};
+		8B0AAACE2941E47B00DA77AA /* CommentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B0BB7B02941146E0034393B /* CommentTableViewCell.swift */,
+				8B0BB7B12941146E0034393B /* CommentTableViewCell.xib */,
+			);
+			path = CommentTableViewCell;
+			sourceTree = "<group>";
+		};
+		8B0AAACF2941E49F00DA77AA /* NotifyTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */,
+				8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */,
+			);
+			path = NotifyTableViewCell;
+			sourceTree = "<group>";
+		};
+		8B0AAAD02941E4AF00DA77AA /* DMTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */,
+				8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */,
+				8BB6A89A29377348008E34C3 /* DMTableViewCellTwo.swift */,
+				8BB6A89B29377348008E34C3 /* DMTableViewCellTwo.xib */,
+			);
+			path = DMTableViewCell;
+			sourceTree = "<group>";
+		};
+		8B0AAAD12941E5E100DA77AA /* FeedLikes(GET) */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AAAD22941E62800DA77AA /* FeedLikesResponse.swift */,
+				8B0AAAD42941E63E00DA77AA /* FeedLikesDataManager.swift */,
+			);
+			path = "FeedLikes(GET)";
+			sourceTree = "<group>";
+		};
+		8B0AAAD62941EC9000DA77AA /* LikesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AAAD72941ECCA00DA77AA /* LikesTableViewCell.swift */,
+				8B0AAAD82941ECCA00DA77AA /* LikesTableViewCell.xib */,
+				8B0AAADB2941ECFE00DA77AA /* LikesTableViewCellTwo.swift */,
+				8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */,
+			);
+			path = LikesTableViewCell;
 			sourceTree = "<group>";
 		};
 		8B0BB79B2940A9640034393B /* Following&Follower(GET) */ = {
@@ -546,20 +609,18 @@
 			children = (
 				8BE9C484293448A1007CC965 /* HomeViewController.swift */,
 				8BDEEE752937572600DDAC63 /* CommentViewController.swift */,
+				8B0AAACC2941E46100DA77AA /* LikesViewController.swift */,
+				8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */,
+				8BB6A8942937712B008E34C3 /* DMViewController.swift */,
+				8BE9C4B22935E00B007CC965 /* UploadViewController.swift */,
+				8BE9C48A29347F5E007CC965 /* HomeVCCell */,
+				8B0AAACE2941E47B00DA77AA /* CommentTableViewCell */,
+				8B0AAAD62941EC9000DA77AA /* LikesTableViewCell */,
+				8B0AAAD02941E4AF00DA77AA /* DMTableViewCell */,
+				8B0AAACF2941E49F00DA77AA /* NotifyTableViewCell */,
 				8B0BB7AB294107CC0034393B /* FeedComment(GET) */,
 				8B0BB7A62940F29F0034393B /* Feed(GET) */,
-				8BE9C48A29347F5E007CC965 /* HomeVCCell */,
-				8B0BB7B02941146E0034393B /* CommentTableViewCell.swift */,
-				8B0BB7B12941146E0034393B /* CommentTableViewCell.xib */,
-				8BE9C4B42935FCC3007CC965 /* NotifyViewController.swift */,
-				8BE9C4B6293600DF007CC965 /* NotifyTableViewCell.swift */,
-				8BE9C4B7293600E0007CC965 /* NotifyTableViewCell.xib */,
-				8BE9C4B22935E00B007CC965 /* UploadViewController.swift */,
-				8BB6A8942937712B008E34C3 /* DMViewController.swift */,
-				8BB6A896293771DB008E34C3 /* DMTableViewCellOne.swift */,
-				8BB6A897293771DB008E34C3 /* DMTableViewCellOne.xib */,
-				8BB6A89A29377348008E34C3 /* DMTableViewCellTwo.swift */,
-				8BB6A89B29377348008E34C3 /* DMTableViewCellTwo.xib */,
+				8B0AAAD12941E5E100DA77AA /* FeedLikes(GET) */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -680,10 +741,12 @@
 				8BE9C48E29347F8A007CC965 /* StoryTableViewCell.xib in Resources */,
 				8BB6A899293771DB008E34C3 /* DMTableViewCellOne.xib in Resources */,
 				8B0BB7A52940C3F30034393B /* ReelsCollectionViewCell.xib in Resources */,
+				8B0AAADA2941ECCA00DA77AA /* LikesTableViewCell.xib in Resources */,
 				8BE9C4922934857C007CC965 /* StoryCollectionViewCell.xib in Resources */,
 				8BE9C49D2934D87B007CC965 /* ProfileCollectionViewCellTwo.xib in Resources */,
 				8B0BB7B32941146E0034393B /* CommentTableViewCell.xib in Resources */,
 				8B0AAABB29412A1600DA77AA /* FollowRecommendTableViewCell.xib in Resources */,
+				8B0AAADE2941ECFE00DA77AA /* LikesTableViewCellTwo.xib in Resources */,
 				8BBD4D642936F91B00044BF5 /* ShopCollectionViewCellTwo.xib in Resources */,
 				8BB7AC402933345E0024C219 /* Main.storyboard in Resources */,
 				8BE9C4A8293510DE007CC965 /* FeedCollectionViewCell.xib in Resources */,
@@ -767,6 +830,7 @@
 				8BE9C49C2934D87B007CC965 /* ProfileCollectionViewCellTwo.swift in Sources */,
 				8BB7AC432933345E0024C219 /* instagram.xcdatamodeld in Sources */,
 				8B0AAABA29412A1600DA77AA /* FollowRecommendTableViewCell.swift in Sources */,
+				8B0AAAD92941ECCA00DA77AA /* LikesTableViewCell.swift in Sources */,
 				8BE9C48829344ACC007CC965 /* FeedTableViewCell.swift in Sources */,
 				8B9F0C55294021F3003E2DD5 /* SearchDataManager.swift in Sources */,
 				8BDEEE762937572600DDAC63 /* CommentViewController.swift in Sources */,
@@ -797,20 +861,24 @@
 				8B0AAAC62941904000DA77AA /* ShopDetailViewController.swift in Sources */,
 				8B9F0C50293F82A4003E2DD5 /* ReelsCell.swift in Sources */,
 				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
+				8B0AAACD2941E46100DA77AA /* LikesViewController.swift in Sources */,
 				8BB7AC3B2933345E0024C219 /* SceneDelegate.swift in Sources */,
 				8B9F0C34293E0E3A003E2DD5 /* SignupResponse.swift in Sources */,
 				8B9F0C53294021DE003E2DD5 /* SearchResponse.swift in Sources */,
 				8BE9C4B8293600E0007CC965 /* NotifyTableViewCell.swift in Sources */,
+				8B0AAADD2941ECFE00DA77AA /* LikesTableViewCellTwo.swift in Sources */,
 				8BE9C485293448A2007CC965 /* HomeViewController.swift in Sources */,
 				8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */,
 				8BE9C4982934BAF3007CC965 /* ProfileCollectionViewCell.swift in Sources */,
 				8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */,
 				8B9F0C38293E1603003E2DD5 /* SignInResponse.swift in Sources */,
 				8B0AAABE29412C8100DA77AA /* RecommendResponse.swift in Sources */,
+				8B0AAAD52941E63F00DA77AA /* FeedLikesDataManager.swift in Sources */,
 				8B9F0C5F29402C39003E2DD5 /* UserInfoDataManager.swift in Sources */,
 				8B9F0C47293EE769003E2DD5 /* ShopDataManager.swift in Sources */,
 				8BBD4D5C2936F80700044BF5 /* ShopViewController.swift in Sources */,
 				8B9F0C4C293F7440003E2DD5 /* ReelsResponse.swift in Sources */,
+				8B0AAAD32941E62800DA77AA /* FeedLikesResponse.swift in Sources */,
 				8BB6A89C29377348008E34C3 /* DMTableViewCellTwo.swift in Sources */,
 				8B0BB7B22941146E0034393B /* CommentTableViewCell.swift in Sources */,
 				8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */,

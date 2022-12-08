@@ -196,7 +196,8 @@ extension ProfileViewController{
     
     func failedToFollowing(message: String) { print("\(message)") }
 }
-extension ProfileViewController: CellDelegate{
+extension ProfileViewController: CellDelegateTwo{
+    
     func recommendFollowTap() {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowRecommendViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)

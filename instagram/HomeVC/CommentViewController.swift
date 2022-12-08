@@ -19,6 +19,7 @@ class CommentViewController:UIViewController{
     @IBAction func dismiss(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     //DataManager
     lazy var dataManager: FeedCommentDataManger = FeedCommentDataManger()
     var FeedCommentData: [FeedCommentResult] = []

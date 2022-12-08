@@ -7,10 +7,19 @@
 
 import Foundation
 
+//홈화면(1)에 쓰이는 delegate
 protocol CellDelegate: AnyObject{
+    //댓글 창 넘어감
     func buttondidtap()
-    func recommendFollowTap()
+    
+    //좋아요 창 넘어감
+    func taptoLikes()
 }
+
+var feedIdLikes = 0
+
+
+//홈화면(5)에 쓰이는 delegate
 protocol CellDelegateTwo: AnyObject{
     func recommendFollowTap()
 }

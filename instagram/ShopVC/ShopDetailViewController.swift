@@ -27,7 +27,7 @@ class ShopDetailViewController: UIViewController{
         print("viewDidAppear")
         
         let priceString = shopDetailData.price!
-        price.text = "$ \(String(describing: priceString))"
+        price.text = "₩ \(String(describing: priceString))"
         
         let nameString = shopDetailData.name!
         name.text = "\(String(describing: nameString))"
