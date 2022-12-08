@@ -15,8 +15,13 @@ class NotifyViewController: UIViewController{
     @IBAction func dismissBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    lazy var dataManager: AlarmDataManger = AlarmDataManger()
+    var AlarmData : [AlarmResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataManager.AlarmItem(vc: self)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,3 +71,15 @@ extension NotifyViewController: UITableViewDelegate, UITableViewDataSource{
     
     
 }
+extension NotifyViewController{
+    func SuccessAlarm(_ result: AlarmResponse) {
+        print("댓글 화면 피드 화면 정보 가져오기 성공!\(result.message!)")
+        AlarmData = result.result
+        print(AlarmData)
+        tableView.reloadData()
+    }
+    func failedToAlarm(message: String) {
+        print("\(message)")
+    }
+}
+    

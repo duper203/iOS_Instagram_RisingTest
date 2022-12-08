@@ -946,7 +946,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MBE-Vv-54R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addFeed" translatesAutoresizingMaskIntoConstraints="NO" id="MBE-Vv-54R">
                                 <rect key="frame" x="15" y="113" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Qae-hh-VFp"/>
@@ -958,11 +958,24 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="gKJ-n3-pxF"/>
                                 </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <navigationItem title="새 게시물" id="Pn2-s7-6VJ"/>
+                                    <navigationItem title="새 게시물" id="Pn2-s7-6VJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="LAB-NO-SAA">
+                                            <color key="tintColor" red="0.062376402320000003" green="0.051779739560000003" blue="0.215700686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismissBtn:" destination="jrA-HT-1mt" id="ii8-ul-h97"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="공유" id="1HM-yN-DAg">
+                                            <connections>
+                                                <action selector="uploadFeedBtn:" destination="jrA-HT-1mt" id="RkR-Yh-Y1c"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="문구 입력...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8k-lS-x8L">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" usesAttributedText="YES" placeholder="문구 입력...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8k-lS-x8L">
                                 <rect key="frame" x="125" y="113" width="253" height="100"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -983,6 +996,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dismissBtn" destination="LAB-NO-SAA" id="uJC-bf-ZkE"/>
                         <outlet property="uploadImgView" destination="MBE-Vv-54R" id="MaS-sE-gGN"/>
                     </connections>
                 </viewController>
@@ -1849,6 +1863,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addFeed" width="1024" height="452"/>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="bookmark.square" catalog="system" width="128" height="114"/>

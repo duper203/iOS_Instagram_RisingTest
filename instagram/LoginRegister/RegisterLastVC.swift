@@ -82,6 +82,6 @@ extension RegisterLastVC{
     func didSuccessRegister(_ result: RegisterResponse) {
         print("회원가입 성공")
         
-//        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
+    
     }
 }

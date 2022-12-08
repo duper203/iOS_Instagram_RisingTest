@@ -40,23 +40,13 @@ class HomeViewController: UIViewController{
         //(5) storytableviewcell 등록
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
-        
-        //imagepicker
-        imagePickerController.delegate = self
-        
-        
-        
-        
     }
     
     @IBAction func uploadFeed(_ sender: Any) {
-        self.imagePickerController.sourceType = .photoLibrary
-        self.present(self.imagePickerController, animated: true, completion: nil)
-    }
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
         
     }
-    
     
     //알림화면으로 전환
     

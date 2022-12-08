@@ -27,6 +27,11 @@
 		8B0AAAE12942152B00DA77AA /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE02942152A00DA77AA /* RegisterRequest.swift */; };
 		8B0AAAE32942153F00DA77AA /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE22942153F00DA77AA /* RegisterResponse.swift */; };
 		8B0AAAE52942156400DA77AA /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */; };
+		8B0AAAE72942417200DA77AA /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE62942417100DA77AA /* UploadResponse.swift */; };
+		8B0AAAE92942419700DA77AA /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE82942419700DA77AA /* UploadRequest.swift */; };
+		8B0AAAEB294241B500DA77AA /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAEA294241B500DA77AA /* UploadDataManager.swift */; };
+		8B0AAAEE2942423F00DA77AA /* AlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAED2942423F00DA77AA /* AlarmResponse.swift */; };
+		8B0AAAF02942425200DA77AA /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAEF2942425200DA77AA /* AlarmDataManager.swift */; };
 		8B0BB79D2940A9810034393B /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79C2940A9810034393B /* FollowingResponse.swift */; };
 		8B0BB79F2940A9940034393B /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79E2940A9940034393B /* FollowerResponse.swift */; };
 		8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */; };
@@ -145,6 +150,11 @@
 		8B0AAAE02942152A00DA77AA /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		8B0AAAE22942153F00DA77AA /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		8B0AAAE62942417100DA77AA /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
+		8B0AAAE82942419700DA77AA /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
+		8B0AAAEA294241B500DA77AA /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
+		8B0AAAED2942423F00DA77AA /* AlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmResponse.swift; sourceTree = "<group>"; };
+		8B0AAAEF2942425200DA77AA /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
 		8B0BB79C2940A9810034393B /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
 		8B0BB79E2940A9940034393B /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
 		8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingDataManager.swift; sourceTree = "<group>"; };
@@ -349,6 +359,15 @@
 				8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */,
 			);
 			path = "Register(POST)";
+			sourceTree = "<group>";
+		};
+		8B0AAAEC2942422200DA77AA /* Alarm(GET) */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AAAED2942423F00DA77AA /* AlarmResponse.swift */,
+				8B0AAAEF2942425200DA77AA /* AlarmDataManager.swift */,
+			);
+			path = "Alarm(GET)";
 			sourceTree = "<group>";
 		};
 		8B0BB79B2940A9640034393B /* Following&Follower(GET) */ = {
@@ -608,12 +627,12 @@
 		8BE9C4BE2936F571007CC965 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
-				8B0AAADF294214F800DA77AA /* Register(POST) */,
-				8B9F0C40293EE047003E2DD5 /* SignIn(POST) */,
 				8B4A801D2933C58500BB985E /* LoginVC.swift */,
 				8B4A801F2933C66800BB985E /* RegisterVC.swift */,
 				8BE9C4BA2936F069007CC965 /* RegisterPhoneViewController.swift */,
 				8B9F0C31293DD223003E2DD5 /* RegisterLastVC.swift */,
+				8B0AAADF294214F800DA77AA /* Register(POST) */,
+				8B9F0C40293EE047003E2DD5 /* SignIn(POST) */,
 			);
 			path = LoginRegister;
 			sourceTree = "<group>";
@@ -635,6 +654,10 @@
 				8B0BB7AB294107CC0034393B /* FeedComment(GET) */,
 				8B0BB7A62940F29F0034393B /* Feed(GET) */,
 				8B0AAAD12941E5E100DA77AA /* FeedLikes(GET) */,
+				8B0AAAEC2942422200DA77AA /* Alarm(GET) */,
+				8B0AAAE62942417100DA77AA /* UploadResponse.swift */,
+				8B0AAAEA294241B500DA77AA /* UploadDataManager.swift */,
+				8B0AAAE82942419700DA77AA /* UploadRequest.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -856,6 +879,8 @@
 				8B9F0C3C293E2A04003E2DD5 /* Constant.swift in Sources */,
 				8B0BB7AF294108070034393B /* FeedCommentDataManager.swift in Sources */,
 				8B0BB7A82940F2C00034393B /* FeedResponse.swift in Sources */,
+				8B0AAAE92942419700DA77AA /* UploadRequest.swift in Sources */,
+				8B0AAAEE2942423F00DA77AA /* AlarmResponse.swift in Sources */,
 				8BB6A8952937712B008E34C3 /* DMViewController.swift in Sources */,
 				8B0AAAC3294189CB00DA77AA /* SearchBarCollectionViewCell.swift in Sources */,
 				8BE9C48D29347F8A007CC965 /* StoryTableViewCell.swift in Sources */,
@@ -865,6 +890,7 @@
 				8BBD4D632936F91B00044BF5 /* ShopCollectionViewCellTwo.swift in Sources */,
 				8B9F0C6329408734003E2DD5 /* DetailViewController.swift in Sources */,
 				8B9F0C5A29402930003E2DD5 /* MyFeedDataManager.swift in Sources */,
+				8B0AAAF02942425200DA77AA /* AlarmDataManager.swift in Sources */,
 				8B9F0C32293DD223003E2DD5 /* RegisterLastVC.swift in Sources */,
 				8B0BB7AD294107EA0034393B /* FeedCommentResponse.swift in Sources */,
 				8B0AAAE52942156400DA77AA /* RegisterDataManager.swift in Sources */,
@@ -885,6 +911,7 @@
 				8B0AAADD2941ECFE00DA77AA /* LikesTableViewCellTwo.swift in Sources */,
 				8BE9C485293448A2007CC965 /* HomeViewController.swift in Sources */,
 				8BE9C4AB29351B23007CC965 /* ReelsViewController.swift in Sources */,
+				8B0AAAE72942417200DA77AA /* UploadResponse.swift in Sources */,
 				8BE9C4982934BAF3007CC965 /* ProfileCollectionViewCell.swift in Sources */,
 				8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */,
 				8B9F0C38293E1603003E2DD5 /* SignInResponse.swift in Sources */,
@@ -898,6 +925,7 @@
 				8BB6A89C29377348008E34C3 /* DMTableViewCellTwo.swift in Sources */,
 				8B0BB7B22941146E0034393B /* CommentTableViewCell.swift in Sources */,
 				8B4A801E2933C58500BB985E /* LoginVC.swift in Sources */,
+				8B0AAAEB294241B500DA77AA /* UploadDataManager.swift in Sources */,
 				8BE9C4A02934D99A007CC965 /* ProfileCollectionViewCellThree.swift in Sources */,
 				8BBD4D5F2936F90300044BF5 /* ShopCollectionViewCellOne.swift in Sources */,
 				8B9F0C36293E15F0003E2DD5 /* SignInRequest.swift in Sources */,
