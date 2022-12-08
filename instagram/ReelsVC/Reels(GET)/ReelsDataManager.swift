@@ -10,9 +10,9 @@ import Alamofire
 
 class ReelsDataManager {
     func ReelsItem(vc: ReelsViewController) {
-        let url = "\(Constant.BASE_URL)/reels"
+        let url = "\(Constant.BASE_URL)/reels/1"
         
-        let header: HTTPHeaders = [ "X-ACCESS-TOKEN":"eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjksImlhdCI6MTY3MDM4MDE2NiwiZXhwIjoxNjcxODUxMzk1fQ.NBIv9uaj-ijqRZqoWSA8FvbTcHwRpJjXPaExtGdoROs"]
+        let header: HTTPHeaders = [ "X-ACCESS-TOKEN":"eeyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjcsImlhdCI6MTY3MDE1NDYzOCwiZXhwIjoxNjcxNjI1ODY3fQ.vRNXNZtjN2NSY_-XqvmKlWIp1uDrbxvnVglwg4i1B3E"]
         
         AF.request(url, method: .get ,parameters: nil, encoding: JSONEncoding.default, headers: header)
             .validate()

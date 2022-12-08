@@ -19,6 +19,9 @@ class RegisterLastVC: UIViewController{
     var age: String = ""
     var user: String = ""
 
+    
+    
+    lazy var dataManager: RegisterDataManager = RegisterDataManager()
 
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var pssTextfield: UITextField!
@@ -29,6 +32,23 @@ class RegisterLastVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 //        turnBtnColor()
+    }
+    
+    @IBAction func signupBtn(_ sender: Any) {
+        
+        registerAccount.name = nameTextfield.text!
+        registerAccount.password = pssTextfield.text!
+        registerAccount.nickname = usernameTextfield.text!
+        registerAccount.age = Int(ageTextfield.text!)!
+        
+        //회원가입 하기
+        let input = RegisterRequest(loginId: registerAccount.loginId, type: registerAccount.type, name: registerAccount.name, nickname: registerAccount.nickname, password: registerAccount.password, age: registerAccount.age)
+        
+        dataManager.postRegister(input, delegate: self)
+        
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func nameTextfield(_ sender: Any) {
@@ -56,17 +76,12 @@ class RegisterLastVC: UIViewController{
         user = usernameTextfield.text!
     }
     
-    @IBAction func signupBtn(_ sender: Any) {
+    
+}
+extension RegisterLastVC{
+    func didSuccessRegister(_ result: RegisterResponse) {
+        print("회원가입 성공")
         
-        
-        
-        
+//        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
     }
-   
-
-
-        
-
-    
-    
 }

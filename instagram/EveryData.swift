@@ -82,3 +82,22 @@ struct MyFeedIndexResult{
 var MyFeedDetailResult : MyFeedIndexResult = MyFeedIndexResult()
 
 var FeedIdx: Int = 0
+
+
+//회원가입
+struct Register{
+    
+    var loginId: String = "" //email또는 전번
+    var type: Int = 0
+
+    var name : String = ""
+    var nickname: String = ""
+    var password : String = ""
+    var age: Int = 0
+    var email: String = ""
+    var phone: String = ""
+
+    
+
+}
+var registerAccount: Register = Register()

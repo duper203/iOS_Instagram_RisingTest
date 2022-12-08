@@ -24,6 +24,9 @@
 		8B0AAADA2941ECCA00DA77AA /* LikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AAAD82941ECCA00DA77AA /* LikesTableViewCell.xib */; };
 		8B0AAADD2941ECFE00DA77AA /* LikesTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAADB2941ECFE00DA77AA /* LikesTableViewCellTwo.swift */; };
 		8B0AAADE2941ECFE00DA77AA /* LikesTableViewCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */; };
+		8B0AAAE12942152B00DA77AA /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE02942152A00DA77AA /* RegisterRequest.swift */; };
+		8B0AAAE32942153F00DA77AA /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE22942153F00DA77AA /* RegisterResponse.swift */; };
+		8B0AAAE52942156400DA77AA /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */; };
 		8B0BB79D2940A9810034393B /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79C2940A9810034393B /* FollowingResponse.swift */; };
 		8B0BB79F2940A9940034393B /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB79E2940A9940034393B /* FollowerResponse.swift */; };
 		8B0BB7A12940A9A60034393B /* FollowingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */; };
@@ -49,7 +52,6 @@
 		8B9F0C49293F6A62003E2DD5 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C48293F6A62003E2DD5 /* VideoPlayerView.swift */; };
 		8B9F0C4C293F7440003E2DD5 /* ReelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C4B293F7440003E2DD5 /* ReelsResponse.swift */; };
 		8B9F0C4E293F745A003E2DD5 /* ReelsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C4D293F745A003E2DD5 /* ReelsDataManager.swift */; };
-		8B9F0C50293F82A4003E2DD5 /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C4F293F82A4003E2DD5 /* ReelsCell.swift */; };
 		8B9F0C53294021DE003E2DD5 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C52294021DE003E2DD5 /* SearchResponse.swift */; };
 		8B9F0C55294021F3003E2DD5 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C54294021F3003E2DD5 /* SearchDataManager.swift */; };
 		8B9F0C582940291E003E2DD5 /* MyFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F0C572940291E003E2DD5 /* MyFeedResponse.swift */; };
@@ -140,6 +142,9 @@
 		8B0AAAD82941ECCA00DA77AA /* LikesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesTableViewCell.xib; sourceTree = "<group>"; };
 		8B0AAADB2941ECFE00DA77AA /* LikesTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesTableViewCellTwo.swift; sourceTree = "<group>"; };
 		8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesTableViewCellTwo.xib; sourceTree = "<group>"; };
+		8B0AAAE02942152A00DA77AA /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		8B0AAAE22942153F00DA77AA /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
 		8B0BB79C2940A9810034393B /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
 		8B0BB79E2940A9940034393B /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
 		8B0BB7A02940A9A60034393B /* FollowingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingDataManager.swift; sourceTree = "<group>"; };
@@ -165,7 +170,6 @@
 		8B9F0C48293F6A62003E2DD5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		8B9F0C4B293F7440003E2DD5 /* ReelsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsResponse.swift; sourceTree = "<group>"; };
 		8B9F0C4D293F745A003E2DD5 /* ReelsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsDataManager.swift; sourceTree = "<group>"; };
-		8B9F0C4F293F82A4003E2DD5 /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
 		8B9F0C52294021DE003E2DD5 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		8B9F0C54294021F3003E2DD5 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		8B9F0C572940291E003E2DD5 /* MyFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedResponse.swift; sourceTree = "<group>"; };
@@ -335,6 +339,16 @@
 				8B0AAADC2941ECFE00DA77AA /* LikesTableViewCellTwo.xib */,
 			);
 			path = LikesTableViewCell;
+			sourceTree = "<group>";
+		};
+		8B0AAADF294214F800DA77AA /* Register(POST) */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AAAE22942153F00DA77AA /* RegisterResponse.swift */,
+				8B0AAAE02942152A00DA77AA /* RegisterRequest.swift */,
+				8B0AAAE42942156400DA77AA /* RegisterDataManager.swift */,
+			);
+			path = "Register(POST)";
 			sourceTree = "<group>";
 		};
 		8B0BB79B2940A9640034393B /* Following&Follower(GET) */ = {
@@ -587,7 +601,6 @@
 			children = (
 				8B0BB7A22940C3F30034393B /* ReelsCollectionViewCell.swift */,
 				8B0BB7A32940C3F30034393B /* ReelsCollectionViewCell.xib */,
-				8B9F0C4F293F82A4003E2DD5 /* ReelsCell.swift */,
 			);
 			path = ReelsVCCell;
 			sourceTree = "<group>";
@@ -595,6 +608,7 @@
 		8BE9C4BE2936F571007CC965 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				8B0AAADF294214F800DA77AA /* Register(POST) */,
 				8B9F0C40293EE047003E2DD5 /* SignIn(POST) */,
 				8B4A801D2933C58500BB985E /* LoginVC.swift */,
 				8B4A801F2933C66800BB985E /* RegisterVC.swift */,
@@ -818,6 +832,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0AAAE12942152B00DA77AA /* RegisterRequest.swift in Sources */,
 				8B0AAAC9294192F100DA77AA /* ShopDetailResponse.swift in Sources */,
 				8BE9C4A329350D05007CC965 /* SearchViewController.swift in Sources */,
 				8BB6A898293771DB008E34C3 /* DMTableViewCellOne.swift in Sources */,
@@ -833,6 +848,7 @@
 				8B0AAAD92941ECCA00DA77AA /* LikesTableViewCell.swift in Sources */,
 				8BE9C48829344ACC007CC965 /* FeedTableViewCell.swift in Sources */,
 				8B9F0C55294021F3003E2DD5 /* SearchDataManager.swift in Sources */,
+				8B0AAAE32942153F00DA77AA /* RegisterResponse.swift in Sources */,
 				8BDEEE762937572600DDAC63 /* CommentViewController.swift in Sources */,
 				8B0BB7A42940C3F30034393B /* ReelsCollectionViewCell.swift in Sources */,
 				8B9F0C3A293E1619003E2DD5 /* SignInDataManager.swift in Sources */,
@@ -851,6 +867,7 @@
 				8B9F0C5A29402930003E2DD5 /* MyFeedDataManager.swift in Sources */,
 				8B9F0C32293DD223003E2DD5 /* RegisterLastVC.swift in Sources */,
 				8B0BB7AD294107EA0034393B /* FeedCommentResponse.swift in Sources */,
+				8B0AAAE52942156400DA77AA /* RegisterDataManager.swift in Sources */,
 				8BB7AC392933345E0024C219 /* AppDelegate.swift in Sources */,
 				8BE9C4942934B69D007CC965 /* ProfileViewController.swift in Sources */,
 				8B0BB7B9294122420034393B /* FollowRecommendViewController.swift in Sources */,
@@ -859,7 +876,6 @@
 				8B9F0C6729409FEB003E2DD5 /* MyFeedDetailViewController.swift in Sources */,
 				8B9F0C582940291E003E2DD5 /* MyFeedResponse.swift in Sources */,
 				8B0AAAC62941904000DA77AA /* ShopDetailViewController.swift in Sources */,
-				8B9F0C50293F82A4003E2DD5 /* ReelsCell.swift in Sources */,
 				8B4A80202933C66800BB985E /* RegisterVC.swift in Sources */,
 				8B0AAACD2941E46100DA77AA /* LikesViewController.swift in Sources */,
 				8BB7AC3B2933345E0024C219 /* SceneDelegate.swift in Sources */,

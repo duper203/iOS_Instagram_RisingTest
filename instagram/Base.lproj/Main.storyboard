@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDP-3U-56h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tf1-4l-Bul">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -96,6 +96,9 @@
                             <constraint firstItem="vPm-fa-TN6" firstAttribute="top" secondItem="b7b-dL-cQ3" secondAttribute="top" constant="10" id="z4d-A4-8rN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="yOC-Vn-YlX" id="JcY-YZ-Wpr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-hO-CQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,6 +193,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="ozN-NA-M9D" id="4QN-9R-Q8P"/>
+                        <outlet property="phoneTextField" destination="U0r-1K-noG" id="Gsa-DK-0bj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10Z-Mr-eml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1277,7 +1281,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-s0-34A">
                                 <rect key="frame" x="238" y="458.66666666666669" width="145" height="22"/>
@@ -1503,7 +1507,6 @@
                                     <action selector="RegisterUserBtn:" destination="W5J-rY-VPQ" eventType="touchUpInside" id="6Vy-0x-IhG"/>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5h-Vb-3Cc"/>
                                     <action selector="signupBtn:" destination="23W-gc-Tac" eventType="touchUpInside" id="39J-LQ-JOA"/>
-                                    <segue destination="QDP-3U-56h" kind="presentation" modalPresentationStyle="fullScreen" id="bq8-P0-KEG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1845,9 +1848,6 @@
             <point key="canvasLocation" x="8744" y="2304"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="T4M-CH-H4q"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bag.fill" catalog="system" width="128" height="128"/>

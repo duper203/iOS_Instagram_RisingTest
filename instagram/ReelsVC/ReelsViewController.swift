@@ -15,8 +15,9 @@ class ReelsViewController: UIViewController{
     //DataManager
     lazy var dataManager:  ReelsDataManager = ReelsDataManager()
     
-    var ReelsData: [ReelsResult] = []
-        
+    var ReelsData: ReelsResult = ReelsResult()
+    var player = AVPlayer()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -30,13 +31,18 @@ class ReelsViewController: UIViewController{
         collectionView.dataSource = self
         let FeedNib = UINib(nibName: "ReelsCollectionViewCell", bundle: nil)
         collectionView.register(FeedNib, forCellWithReuseIdentifier: "ReelsCollectionViewCell")
-        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        player.play()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        player.pause()
     }
     
 }
 extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ReelsData.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,10 +56,11 @@ extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSou
 //
 //        }
         //ReelsData.url : 릴스영상 url
-        if let urlString = URL(string: ReelsData[indexPath.row].url!){
+        let reelsUrlString = ReelsData.url
+        if let urlString = URL(string: reelsUrlString){
             print(urlString)
         
-            let player = AVPlayer(url: urlString)
+            player = AVPlayer(url: urlString)
             let playerLayer = AVPlayerLayer(player: player)
             playerLayer.frame = self.view.bounds
             playerLayer.videoGravity = .resizeAspect
@@ -77,7 +84,6 @@ extension ReelsViewController {
 
         ReelsData = result.result
         collectionView.reloadData()
-        print(ReelsData.count)
         
     }
     

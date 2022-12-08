@@ -10,12 +10,17 @@ import UIKit
 
 class RegisterPhoneViewController: UIViewController{
     
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
     //휴대전화번호로 가입 진행하기 (다음단계)
     @IBAction func loginBtn(_ sender: Any) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterTwoViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
+        registerAccount.loginId = phoneTextField.text!
+        registerAccount.phone = phoneTextField.text!
+        registerAccount.type = 1
+        
     }
     
     //다시 이메일로 회원가입할 화면으로 돌아가기

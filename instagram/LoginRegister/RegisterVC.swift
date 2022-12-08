@@ -9,10 +9,23 @@ import Foundation
 import UIKit
 class RegisterVC: UIViewController{
     
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    
     //이메일 주소로 가입하기 다음 단계
     @IBAction func RegisterUserBtn(_ sender: Any) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterTwoViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+        registerAccount.loginId = emailTextField.text!
+        registerAccount.email = emailTextField.text!
+        
+        registerAccount.type = 0
+        
+        
+       
+
+        
     }
     
     //휴대폰으로 가입 할 화면으로 전환

@@ -11,6 +11,7 @@ import Alamofire
 
 class LoginVC: UIViewController{
     lazy var dataManager: SignInDataManager = SignInDataManager()
+    
     var ID: String = ""
     var pss: String = ""
     
@@ -53,8 +54,7 @@ extension LoginVC {
     func didSuccessSignIn(_ result: SignInResponse) {
         print("로그인에 성공")
         
-        Constant.jwtToken = (result.result?.jwt)!
-        print(Constant.jwtToken)
+        Constant.jwtToken = (result.result?.jwt!)!
         
 //        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
     }
