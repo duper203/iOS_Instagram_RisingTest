@@ -17,7 +17,6 @@ class FollowRecommendTableViewCell: UITableViewCell {
         // Initialization code
         profileImageView.layer.cornerRadius = 33
         profileImageView.clipsToBounds = true
-        profileImageView.layer.borderColor = UIColor.gray.cgColor
         profileImageView.layer.borderWidth = 1
     }
 

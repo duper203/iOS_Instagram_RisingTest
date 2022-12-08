@@ -28,6 +28,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
         profileImageView.layer.cornerRadius = 44
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderColor = UIColor.gray.cgColor

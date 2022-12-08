@@ -87,6 +87,18 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        
+        shopIndex = shopData[indexPath.row].itemId
+        print(shopIndex!)
+        
+        
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "ShopDetailViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+        
+       
+        }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -94,11 +106,11 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         switch section{
         case 0:
-            return CGSize(width: collectionView.frame.width, height: CGFloat(100))
+            return CGSize(width: collectionView.frame.width, height: CGFloat(50))
         default:
-            let side = CGFloat((collectionView.frame.width / 3) - (4/3))
+            let side = CGFloat((collectionView.frame.width / 2) - (4/3))
             print(side)
-            return CGSize(width: 130, height: 130)
+            return CGSize(width: side, height: side)
             
         }
     }

@@ -83,7 +83,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.delegate = self
             
             if let urlString = MyInfoData.imageUrl{
-                print(urlString)
+                
+                MyFeedDetailResult.userimage = urlString
                 
                 let url = URL(string: urlString)
                 cell.profileImageView.kf.setImage(with: url)
@@ -117,9 +118,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             collectionView.deselectItem(at: indexPath, animated: true)
-        
-        print(indexPath.row)
-        
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MyFeedDetailViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
         
@@ -190,9 +188,7 @@ extension ProfileViewController{
     
     func SuccessFollowing(_ result: FollowingResponse) {
         print("팔로잉 정보 가져오기 성공!\(result.message!)")
-        print(result.result)
-//        FollowingListData = result.result.userList
-        FollowingCount = result.result.count!
+                FollowingCount = result.result.count!
         collectionView.reloadData()
         print("팔로잉 수")
         print(FollowingCount)

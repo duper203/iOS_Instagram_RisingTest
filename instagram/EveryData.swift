@@ -14,7 +14,7 @@ protocol CellDelegate: AnyObject{
 
 
 
-//cell누를 때 상세정보 화면전환시 데이터 전달로 사용
+//홈화면(2) cell누를 때 상세정보 화면전환시 데이터 전달로 사용
 
 struct SearchIndexResult{
     
@@ -30,6 +30,22 @@ struct SearchIndexResult{
 
 var detailResult : SearchIndexResult = SearchIndexResult()
 
+//홈화면(4)  cell누를 때 상세정보 화면전환시 데이터 전달로 사용
+
+var shopIndex : Int?
+
+struct ShopIndexResult{
+    var itemId : Int?
+    var shopId : Int?
+    var name : String?
+    var content : String?
+    var price : Int?
+    var url : String?
+}
+var shopDetailResult : ShopIndexResult = ShopIndexResult()
+
+
+//
 struct MyFeedIndexResult{
     
     var feedId : Int?
@@ -39,6 +55,8 @@ struct MyFeedIndexResult{
     var createdAt: String?
     var image : String?
     var likeFlag: Int = 0
+    var userimage : String?
+    
 
 }
 

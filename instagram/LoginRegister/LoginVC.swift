@@ -31,10 +31,6 @@ class LoginVC: UIViewController{
         dataManager.postSignIn(input, delegate: self)
         
         print("화면전환")
-//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//        nextVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-//        nextVC.modalPresentationStyle = .fullScreen
-//        self.present(nextVC, animated: true, completion: nil)
         
         
     }

@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
     var searchData: [SearchResult] = []
     
     //searchController
-    let searchController = UISearchController()
+//    let searchController = UISearchController()
 
 
     @IBOutlet weak var FeedcollectionView: UICollectionView!
@@ -22,12 +22,15 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-
         
-        //searchController
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
+//        navigationController?.isNavigationBarHidden = true
+
+                
+//        //searchController
+//        searchController.searchResultsUpdater = self
+//        navigationItem.searchController = searchController
+    
+        setupSearchController()
         
         //GET
         dataManager.SearchItem(vc: self)
@@ -38,6 +41,15 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
         let FeedNib = UINib(nibName: "FeedCollectionViewCell", bundle: nil)
         FeedcollectionView.register(FeedNib, forCellWithReuseIdentifier: "FeedCollectionViewCell")
     }
+    
+    func setupSearchController() {
+            let searchController = UISearchController(searchResultsController: nil)
+            searchController.searchBar.placeholder = "검색"
+            searchController.hidesNavigationBarDuringPresentation = false
+            
+            self.navigationItem.searchController = searchController
+            self.navigationItem.hidesSearchBarWhenScrolling = false
+        }
     
     func updateSearchResults(for searchController: UISearchController){
         guard let text = searchController.searchBar.text else{
