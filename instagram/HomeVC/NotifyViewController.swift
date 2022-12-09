@@ -44,12 +44,13 @@ extension NotifyViewController: UITableViewDelegate, UITableViewDataSource{
             }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
-            return 1
-        }
-        else{
-            return 15
-        }
+        return AlarmData.count
+//        if section == 0{
+//            return 1
+//        }
+//        else{
+//            return 15
+//        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 0){
@@ -59,13 +60,25 @@ extension NotifyViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotifyTableViewCell", for: indexPath) as! NotifyTableViewCell
         
-        if indexPath.section == 0 {
-            return cell
-        }else{
-            return cell
+        
+//        if indexPath.section == 0 {
+//            return cell
+//        }else{
+//            return cell
+//        }
+        if let urlString = AlarmData[indexPath.row].userImage{
+                    
+            let url = URL(string: urlString)
+            cell.userImage.kf.setImage(with: url)
         }
+        
+        let cellUserID =  AlarmData[indexPath.row].userId!
+        cell.contentLabel.text = "USER \(cellUserID) 님이 \(AlarmData[indexPath.row].content!)"
+        
+        return cell
 
     }
     

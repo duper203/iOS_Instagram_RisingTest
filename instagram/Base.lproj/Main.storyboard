@@ -511,14 +511,41 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nr-I2-mX9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="d8p-gk-LXo">
+                                        <rightBarButtonItems>
+                                            <barButtonItem image="line.3.horizontal" catalog="system" id="VU3-p3-qKF">
+                                                <color key="tintColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </barButtonItem>
+                                            <barButtonItem image="bookmark.square" catalog="system" id="Efi-T2-dvb">
+                                                <color key="tintColor" red="0.062376402320000003" green="0.051779739560000003" blue="0.215700686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHC-x1-1ar">
+                                <rect key="frame" x="16" y="71" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gd1-KC-l3b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QHC-x1-1ar" firstAttribute="leading" secondItem="Gd1-KC-l3b" secondAttribute="leading" constant="16" id="92b-b7-o63"/>
                             <constraint firstItem="Gd1-KC-l3b" firstAttribute="bottom" secondItem="LfH-vg-lks" secondAttribute="bottom" id="CTI-fm-ybd"/>
+                            <constraint firstItem="8Nr-I2-mX9" firstAttribute="top" secondItem="Gd1-KC-l3b" secondAttribute="top" id="NEc-YR-RSW"/>
                             <constraint firstItem="LfH-vg-lks" firstAttribute="leading" secondItem="Gd1-KC-l3b" secondAttribute="leading" id="Wbc-FV-Vax"/>
                             <constraint firstItem="Gd1-KC-l3b" firstAttribute="trailing" secondItem="LfH-vg-lks" secondAttribute="trailing" id="dI3-Yo-V0b"/>
-                            <constraint firstItem="LfH-vg-lks" firstAttribute="top" secondItem="Gd1-KC-l3b" secondAttribute="top" id="jQy-ut-1xK"/>
+                            <constraint firstItem="QHC-x1-1ar" firstAttribute="top" secondItem="Gd1-KC-l3b" secondAttribute="top" constant="12" id="flJ-qB-z6U"/>
+                            <constraint firstItem="LfH-vg-lks" firstAttribute="top" secondItem="Gd1-KC-l3b" secondAttribute="top" constant="44" id="jQy-ut-1xK"/>
+                            <constraint firstItem="8Nr-I2-mX9" firstAttribute="leading" secondItem="Gd1-KC-l3b" secondAttribute="leading" id="lxf-C2-qAu"/>
+                            <constraint firstItem="8Nr-I2-mX9" firstAttribute="trailing" secondItem="Gd1-KC-l3b" secondAttribute="trailing" id="uYp-nc-LDu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pje-om-foc">
@@ -743,11 +770,38 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-4K-BfR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="zzp-a4-SQ7">
+                                        <rightBarButtonItems>
+                                            <barButtonItem image="line.3.horizontal" catalog="system" id="zAk-Kf-g3F">
+                                                <color key="tintColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </barButtonItem>
+                                            <barButtonItem image="plus" catalog="system" id="Mci-76-gAb">
+                                                <color key="tintColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTg-K3-KBp">
+                                <rect key="frame" x="16" y="71" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="faH-JL-oe2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kpF-G8-8mK" firstAttribute="top" secondItem="faH-JL-oe2" secondAttribute="top" id="TR0-kz-Z5z"/>
+                            <constraint firstItem="Xqw-4K-BfR" firstAttribute="top" secondItem="faH-JL-oe2" secondAttribute="top" id="3Ej-3P-xQB"/>
+                            <constraint firstItem="Xqw-4K-BfR" firstAttribute="leading" secondItem="faH-JL-oe2" secondAttribute="leading" id="D72-IQ-Wft"/>
+                            <constraint firstItem="ZTg-K3-KBp" firstAttribute="leading" secondItem="faH-JL-oe2" secondAttribute="leading" constant="16" id="HfW-Jp-Bgf"/>
+                            <constraint firstAttribute="trailing" secondItem="Xqw-4K-BfR" secondAttribute="trailing" id="Nz4-re-Y8i"/>
+                            <constraint firstItem="ZTg-K3-KBp" firstAttribute="top" secondItem="faH-JL-oe2" secondAttribute="top" constant="12" id="S3d-Di-77s"/>
+                            <constraint firstItem="kpF-G8-8mK" firstAttribute="top" secondItem="faH-JL-oe2" secondAttribute="top" constant="44" id="TR0-kz-Z5z"/>
                             <constraint firstItem="faH-JL-oe2" firstAttribute="bottom" secondItem="kpF-G8-8mK" secondAttribute="bottom" id="gE9-ZV-Ge8"/>
                             <constraint firstItem="kpF-G8-8mK" firstAttribute="leading" secondItem="faH-JL-oe2" secondAttribute="leading" id="qA4-7U-gvD"/>
                             <constraint firstItem="faH-JL-oe2" firstAttribute="trailing" secondItem="kpF-G8-8mK" secondAttribute="trailing" id="s5o-pi-tpg"/>
@@ -1562,13 +1616,12 @@
         <!--Navigation Controller-->
         <scene sceneID="i3Y-Yb-BTV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bsz-KX-lBc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Bsz-KX-lBc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="fAt-Qs-Fm4">
                         <color key="badgeColor" red="0.078774772579999999" green="0.04534756392" blue="0.10588840400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kpC-sZ-0kB">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1627,13 +1680,12 @@
         <!--Navigation Controller-->
         <scene sceneID="Fva-nW-2tj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CDB-dK-fhC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="CDB-dK-fhC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="bag" catalog="system" selectedImage="bag.fill" id="p7h-YQ-I2W">
                         <color key="badgeColor" red="0.1066948399" green="0.079909630120000005" blue="0.16471457480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5u-3G-64w">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1886,6 +1938,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

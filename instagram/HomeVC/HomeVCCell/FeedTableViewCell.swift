@@ -39,10 +39,15 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var userProfileTwo: UIImageView!
     
     @IBAction func btnHeart(_ sender: Any) {
+        
+        
         if btnHeart.isSelected{
             btnHeart.isSelected = false
+
         }else{
             btnHeart.isSelected = true
+            self.delegate?.likeFeed()
+
         }
     }
     @IBAction func btnBookmark(_ sender: Any) {

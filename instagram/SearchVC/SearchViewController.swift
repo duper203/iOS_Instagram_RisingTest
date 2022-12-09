@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController, UISearchResultsUpdating{
+class SearchViewController: UIViewController{
     
     
     //DataManager
@@ -16,9 +16,9 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
     var searchData: [SearchResult] = []
     
     //searchController
-//    let searchController = UISearchController()
-
-
+    //    let searchController = UISearchController()
+    
+    
     @IBOutlet weak var FeedcollectionView: UICollectionView!
     
     
@@ -26,13 +26,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = true
-
-//        navigationController?.isNavigationBarHidden = true
-//        //searchController
-//        searchController.searchResultsUpdater = self
-//        navigationItem.searchController = searchController
-    
-        setupSearchController()
+        
         
         //GET
         dataManager.SearchItem(vc: self)
@@ -40,49 +34,59 @@ class SearchViewController: UIViewController, UISearchResultsUpdating{
         //collectionview
         FeedcollectionView.delegate = self
         FeedcollectionView.dataSource = self
+        
+        let FeedNibOne = UINib(nibName: "FeedCollectionViewCellOne", bundle: nil)
+        FeedcollectionView.register(FeedNibOne, forCellWithReuseIdentifier: "FeedCollectionViewCellOne")
+        
         let FeedNib = UINib(nibName: "FeedCollectionViewCell", bundle: nil)
         FeedcollectionView.register(FeedNib, forCellWithReuseIdentifier: "FeedCollectionViewCell")
-    }
-    
-    func setupSearchController() {
-            let searchController = UISearchController(searchResultsController: nil)
-            searchController.searchBar.placeholder = "검색"
-            searchController.hidesNavigationBarDuringPresentation = false
-            
-            self.navigationItem.searchController = searchController
-            self.navigationItem.hidesSearchBarWhenScrolling = false
-        }
-    
-    func updateSearchResults(for searchController: UISearchController){
-        guard let text = searchController.searchBar.text else{
-            return
-        }
-        print(text)
+        
     }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchData.count
+        switch section{
+        case 0:
+            return 1
+        default:
+            return searchData.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = FeedcollectionView.dequeueReusableCell(withReuseIdentifier: "FeedCollectionViewCell", for: indexPath) as? FeedCollectionViewCell else{
-            return UICollectionViewCell()
-        }
-        if let urlString = searchData[indexPath.item].image{
-            print(urlString)
+        let section = indexPath.section
+        
+        switch section{
+        case 0:
+            guard let cell = FeedcollectionView.dequeueReusableCell(withReuseIdentifier: "FeedCollectionViewCellOne", for: indexPath) as? FeedCollectionViewCellOne else{
+                
+                return UICollectionViewCell()
+            }
+            return cell
             
-            let url = URL(string: urlString)
-            cell.searchFeedImage.kf.setImage(with: url)
+        default:
+            
+            guard let cell = FeedcollectionView.dequeueReusableCell(withReuseIdentifier: "FeedCollectionViewCell", for: indexPath) as? FeedCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            if let urlString = searchData[indexPath.item].image{
+                print(urlString)
+                
+                let url = URL(string: urlString)
+                cell.searchFeedImage.kf.setImage(with: url)
+            }
+            return cell
         }
-        return cell
+        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             collectionView.deselectItem(at: indexPath, animated: true)
-        
-        print(indexPath.row)
-        
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
         
@@ -95,17 +99,35 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let side = CGFloat((collectionView.frame.width / 3) - (4/3))
-        print(side)
-        return CGSize(width: side, height: side)
+        
+        let section = indexPath.section
+        
+        switch section{
+        case 0:
+            return CGSize(width: collectionView.frame.width, height: CGFloat(50))
+        default:
+            let side = CGFloat((collectionView.frame.width / 3) - (4/3))
+            print(side)
+            return CGSize(width: side, height: side)
+            
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(1)
+        switch section{
+        case 0:
+            return CGFloat(0)
+        default:
+            return CGFloat(1)
+        }
 
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-
-        return CGFloat(1)
+        switch section{
+        case 0:
+            return CGFloat(0)
+        default:
+            return CGFloat(1)
+        }
 
     }
     

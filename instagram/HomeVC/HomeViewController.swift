@@ -18,6 +18,9 @@ class HomeViewController: UIViewController{
     //DataManager
     lazy var dataManagerOne: FeedDataManger = FeedDataManger()
     var FeedData: [FeedResult] = []
+    
+    lazy var dataManagerTwo: LikeFeedDataManager = LikeFeedDataManager()
+    var LikeFeedData : LikeFeedResult = LikeFeedResult()
 
     
     override func viewDidLoad() {
@@ -134,7 +137,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             cell.explainLabel.text = FeedData[indexPath.row].content
             
             
-            cell.likesBtn.setTitle("좋아요 \( likeString)개", for: .normal)
+            cell.likesBtn.setTitle("좋아요 \(likeString)개", for: .normal)
             
             return cell
         }
@@ -210,6 +213,14 @@ extension HomeViewController: CellDelegate{
         
     }
     
+    func likeFeed(){
+        
+        let input = LikeFeedRequest(userId: 9)
+        dataManagerTwo.postLike(input, delegate: self)
+
+
+    }
+    
     
 }
 
@@ -231,14 +242,14 @@ extension HomeViewController {
     }
     
     
+    func SuccessLikeFeed(_ result: LikeFeedResponse) {
+        print("홈 화면 피드 화면 정보 가져오기 성공!\(result.message!)")
+        LikeFeedData = result.result!
+
+        tableView.reloadData()
+    }
     
-    //FEED Likes
-//    func SuccessFeedLikes(_ result: FeedResponse) {
-//        print("홈 화면 피드 화면 정보 가져오기 성공!\(result.message!)")
-//        tableView.reloadData()
-//    }
-//    func failedToFeedLikes(message: String) {
-//        print("\(message)")
-//    }
+
+
 }
 

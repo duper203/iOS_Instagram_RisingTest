@@ -14,6 +14,8 @@ protocol CellDelegate: AnyObject{
     
     //좋아요 창 넘어감
     func taptoLikes()
+    
+    func likeFeed()
 }
 
 var feedIdLikes = 0

@@ -10,7 +10,7 @@ import Alamofire
 
 class LikesListDataManger {
     func LikesList(vc: LikesViewController, feedId: Int) {
-        let url = "\(Constant.BASE_URL)/feed/\(feedId)/likes"
+        let url = "\(Constant.BASE_URL)/feed/16/likes"
         
         let header: HTTPHeaders = [ "X-ACCESS-TOKEN":"eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjksImlhdCI6MTY3MDM4MDE2NiwiZXhwIjoxNjcxODUxMzk1fQ.NBIv9uaj-ijqRZqoWSA8FvbTcHwRpJjXPaExtGdoROs"]
         

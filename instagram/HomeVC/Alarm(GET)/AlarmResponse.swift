@@ -15,7 +15,7 @@ struct AlarmResponse: Decodable {
 
 struct AlarmResult: Decodable {
     
-    var alarm: Int?
+    var content: String?
     var userId: Int?
     var userImage: String?
     
